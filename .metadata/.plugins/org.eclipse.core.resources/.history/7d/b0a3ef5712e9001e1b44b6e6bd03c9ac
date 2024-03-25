@@ -1,0 +1,57 @@
+package managers;
+
+import administrations.FollowMeAdministration;
+import configurations.FollowMeConfiguration;
+import enums.IlluminanceGoal;
+
+public class FollowMeManagerImpl implements FollowMeAdministration {
+
+	/** Field for followMeConfiguration dependency */
+	private FollowMeConfiguration followMeConfiguration;
+
+	/** Component Lifecycle Method */
+	public void stop() {
+		// TODO: Add your implementation code here
+		System.out.println("The follow me manager component is stopping ...");
+	}
+
+	/** Component Lifecycle Method */
+	public void start() {
+		// TODO: Add your implementation code here
+		System.out.println("The follow me manager component is starting ...");
+	}
+
+	private int askProviderCurrentMaxLight() {
+		int numberOfTurnedOnLights = 0;
+
+		numberOfTurnedOnLights = followMeConfiguration.getMaximumNumberOfLightsToTurnOn();
+		System.out.println("The maximum number of lights is : " + numberOfTurnedOnLights);
+
+		return numberOfTurnedOnLights;
+	}
+	
+	private void askProviderToChangeMaxLight(int newValue) {
+		followMeConfiguration.setMaximumNumberOfLightsToTurnOn(newValue);
+		System.out.println( " valeur set");
+	}
+	
+	public void setIlluminancePreference(IlluminanceGoal illuminanceGoal) {
+		askProviderToChangeMaxLight(illuminanceGoal.getNumberOfLightsToTurnOn());
+	}
+
+	public IlluminanceGoal getIlluminancePreference() {
+		IlluminanceGoal illuminanceGoalByInt = IlluminanceGoal.getIlluminanceGoalByInt(askProviderCurrentMaxLight());
+		IlluminanceGoal illuminanceGoalByDouble = IlluminanceGoal.getIlluminanceGoalByDouble(askProviderCurrentTargetIlluminance());
+		
+		if(illuminanceGoalByDouble != illuminanceGoalByInt) {
+			System.out.println("WARNING : illuminance goal is not the same by int by double");
+		}
+			
+		if (illuminanceGoalByInt == null) {
+			System.out.println("ERROR : illuminance goal is null");
+		}
+		
+		return illuminanceGoalByInt;
+	}
+
+}

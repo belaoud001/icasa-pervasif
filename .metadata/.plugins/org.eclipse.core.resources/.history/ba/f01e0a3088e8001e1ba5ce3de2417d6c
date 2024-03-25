@@ -1,0 +1,15 @@
+package clients;
+
+import service.Hello;
+
+public class HelloClientImpl {
+
+	/** Field for greetingServices dependency */
+	private Hello[] greetingServices;
+
+	/** Bind Method for greetingServices dependency */
+	public void bindGreetingServices(Hello hello, Map properties){
+	// TODO: Add your implementation code here
+	}
+
+}

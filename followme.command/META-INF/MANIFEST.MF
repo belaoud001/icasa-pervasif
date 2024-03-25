@@ -1,0 +1,59 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: follow-me-command
+Bundle-SymbolicName: followme.command
+Bundle-Version: 1.0.0.qualifier
+Created-By: iPOJO 1.12.1
+Import-Package: administrations, enums, fr.liglab.adele.icasa, fr.ligl
+ ab.adele.icasa.access, fr.liglab.adele.icasa.access.command, fr.ligla
+ b.adele.icasa.application, fr.liglab.adele.icasa.application.impl, fr
+ .liglab.adele.icasa.application.impl.command, fr.liglab.adele.icasa.a
+ pplication.remote, fr.liglab.adele.icasa.application.remote.util, fr.
+ liglab.adele.icasa.clockservice, fr.liglab.adele.icasa.clockservice.i
+ mpl, fr.liglab.adele.icasa.clockservice.util, fr.liglab.adele.icasa.c
+ ommand, fr.liglab.adele.icasa.command.handler, fr.liglab.adele.icasa.
+ commands, fr.liglab.adele.icasa.commands.impl, fr.liglab.adele.icasa.
+ common, fr.liglab.adele.icasa.common.impl, fr.liglab.adele.icasa.comm
+ on.xml.utils, fr.liglab.adele.icasa.dependency.manager.exception, fr.
+ liglab.adele.icasa.device, fr.liglab.adele.icasa.device.bathroomscale
+ , fr.liglab.adele.icasa.device.box, fr.liglab.adele.icasa.device.butt
+ on, fr.liglab.adele.icasa.device.button.simulated, fr.liglab.adele.ic
+ asa.device.doorWindow, fr.liglab.adele.icasa.device.gasSensor, fr.lig
+ lab.adele.icasa.device.light, fr.liglab.adele.icasa.device.manager, f
+ r.liglab.adele.icasa.device.motion, fr.liglab.adele.icasa.device.powe
+ r, fr.liglab.adele.icasa.device.presence, fr.liglab.adele.icasa.devic
+ e.security, fr.liglab.adele.icasa.device.settopbox, fr.liglab.adele.i
+ casa.device.sound, fr.liglab.adele.icasa.device.sprinkler, fr.liglab.
+ adele.icasa.device.temperature, fr.liglab.adele.icasa.device.util, fr
+ .liglab.adele.icasa.exception, fr.liglab.adele.icasa.frontend.service
+ s, fr.liglab.adele.icasa.frontend.services.rest, fr.liglab.adele.icas
+ a.frontend.services.utils, fr.liglab.adele.icasa.listener, fr.liglab.
+ adele.icasa.location, fr.liglab.adele.icasa.location.impl, fr.liglab.
+ adele.icasa.location.util, fr.liglab.adele.icasa.remote.wisdom, fr.li
+ glab.adele.icasa.remote.wisdom.util, fr.liglab.adele.icasa.service.lo
+ cation, fr.liglab.adele.icasa.service.preferences, fr.liglab.adele.ic
+ asa.service.scheduler, fr.liglab.adele.icasa.service.zone.dimension.c
+ alculator, fr.liglab.adele.icasa.service.zone.size.calculator, fr.lig
+ lab.adele.icasa.simulator, fr.liglab.adele.icasa.simulator.listener, 
+ fr.liglab.adele.icasa.simulator.listener.util, fr.liglab.adele.icasa.
+ simulator.remote.wisdom.util, fr.liglab.adele.icasa.simulator.script.
+ executor, fr.liglab.adele.icasa.simulator.services, org.apache.felix.
+ ipojo;version="[1.12.1,2.0.0)", org.apache.felix.ipojo.architecture;v
+ ersion="[1.12.1,2.0.0)", org.json, org.osgi.service.cm;version=1.2, o
+ rg.osgi.service.log;version=1.3
+iPOJO-Components: instance { $name="commands" $component="commands.Fol
+ lowMeCommand" }component { $name="commands.FollowMeCommand" $classnam
+ e="commands.FollowMeCommand" fr.liglab.adele.icasa.command.handler:co
+ mmandprovider { $namespace="commands" fr.liglab.adele.icasa.command.h
+ andler:command { $method="getIlluminancePreference" }fr.liglab.adele.
+ icasa.command.handler:command { $method="setIlluminancePreference" }f
+ r.liglab.adele.icasa.command.handler:command { $method="getEnergyGoal
+ " }fr.liglab.adele.icasa.command.handler:command { $method="setEnergy
+ SavingGoal" }}requires { $field="followMeAdministration" }manipulatio
+ n { $classname="commands.FollowMeCommand" field { $name="followMeAdmi
+ nistration" $type="administrations.FollowMeAdministration" }method { 
+ $name="getIlluminancePreference" }method { $name="setIlluminancePrefe
+ rence" $arguments="{java.lang.String}" $names="{illuminancePreference
+ }" }method { $name="getEnergyGoal" }method { $name="setEnergySavingGo
+ al" $arguments="{java.lang.String}" $names="{energySavingGoal}" }}}
+

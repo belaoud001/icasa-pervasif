@@ -1,0 +1,13 @@
+package lights;
+
+import fr.liglab.adele.icasa.device.presence.PresenceSensor;
+import fr.liglab.adele.icasa.device.light.BinaryLight;
+
+public class BinaryLightImpl {
+
+	/** Field for PresenceSensors dependency */
+	private PresenceSensor[] PresenceSensors;
+	/** Field for binaryLights dependency */
+	private BinaryLight[] binaryLights;
+
+}

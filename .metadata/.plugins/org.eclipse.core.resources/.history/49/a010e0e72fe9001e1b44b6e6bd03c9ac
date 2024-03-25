@@ -1,0 +1,58 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: follow-me-manager
+Bundle-SymbolicName: followme.manager
+Bundle-Version: 1.0.0.qualifier
+Created-By: iPOJO 1.12.1
+Import-Package: administrations, configurations, fr.liglab.adele.icasa
+ , fr.liglab.adele.icasa.access, fr.liglab.adele.icasa.access.command,
+  fr.liglab.adele.icasa.application, fr.liglab.adele.icasa.application
+ .impl, fr.liglab.adele.icasa.application.impl.command, fr.liglab.adel
+ e.icasa.application.remote, fr.liglab.adele.icasa.application.remote.
+ util, fr.liglab.adele.icasa.clockservice, fr.liglab.adele.icasa.clock
+ service.impl, fr.liglab.adele.icasa.clockservice.util, fr.liglab.adel
+ e.icasa.command, fr.liglab.adele.icasa.command.handler, fr.liglab.ade
+ le.icasa.commands, fr.liglab.adele.icasa.commands.impl, fr.liglab.ade
+ le.icasa.common, fr.liglab.adele.icasa.common.impl, fr.liglab.adele.i
+ casa.common.xml.utils, fr.liglab.adele.icasa.dependency.manager.excep
+ tion, fr.liglab.adele.icasa.device, fr.liglab.adele.icasa.device.bath
+ roomscale, fr.liglab.adele.icasa.device.box, fr.liglab.adele.icasa.de
+ vice.button, fr.liglab.adele.icasa.device.button.simulated, fr.liglab
+ .adele.icasa.device.doorWindow, fr.liglab.adele.icasa.device.gasSenso
+ r, fr.liglab.adele.icasa.device.light, fr.liglab.adele.icasa.device.m
+ anager, fr.liglab.adele.icasa.device.motion, fr.liglab.adele.icasa.de
+ vice.power, fr.liglab.adele.icasa.device.presence, fr.liglab.adele.ic
+ asa.device.security, fr.liglab.adele.icasa.device.settopbox, fr.ligla
+ b.adele.icasa.device.sound, fr.liglab.adele.icasa.device.sprinkler, f
+ r.liglab.adele.icasa.device.temperature, fr.liglab.adele.icasa.device
+ .util, fr.liglab.adele.icasa.exception, fr.liglab.adele.icasa.fronten
+ d.services, fr.liglab.adele.icasa.frontend.services.rest, fr.liglab.a
+ dele.icasa.frontend.services.utils, fr.liglab.adele.icasa.listener, f
+ r.liglab.adele.icasa.location, fr.liglab.adele.icasa.location.impl, f
+ r.liglab.adele.icasa.location.util, fr.liglab.adele.icasa.remote.wisd
+ om, fr.liglab.adele.icasa.remote.wisdom.util, fr.liglab.adele.icasa.s
+ ervice.location, fr.liglab.adele.icasa.service.preferences, fr.liglab
+ .adele.icasa.service.scheduler, fr.liglab.adele.icasa.service.zone.di
+ mension.calculator, fr.liglab.adele.icasa.service.zone.size.calculato
+ r, fr.liglab.adele.icasa.simulator, fr.liglab.adele.icasa.simulator.l
+ istener, fr.liglab.adele.icasa.simulator.listener.util, fr.liglab.ade
+ le.icasa.simulator.remote.wisdom.util, fr.liglab.adele.icasa.simulato
+ r.script.executor, fr.liglab.adele.icasa.simulator.services, org.apac
+ he.felix.ipojo;version="[1.12.1,2.0.0)", org.apache.felix.ipojo.archi
+ tecture;version="[1.12.1,2.0.0)", org.json, org.osgi.service.cm;versi
+ on=1.2, org.osgi.service.log;version=1.3, service
+iPOJO-Components: instance { $component="FollowMeManager" $name="Follo
+ wMeManager-1" }component { $classname="managers.FollowMeManagerImpl" 
+ $name="FollowMeManager" callback { $method="start" $transition="valid
+ ate" }callback { $method="stop" $transition="invalidate" }requires { 
+ $specification="configurations.FollowMeConfiguration" $field="followM
+ eConfiguration" }manipulation { $classname="managers.FollowMeManagerI
+ mpl" interface { $name="administrations.FollowMeAdministration" }fiel
+ d { $name="followMeConfiguration" $type="configurations.FollowMeConfi
+ guration" }method { $name="stop" }method { $name="start" }method { $n
+ ame="askProviderCurrentMaxLight" $return="int" }method { $name="askPr
+ oviderToChangeMaxLight" $arguments="{int}" $names="{newValue}" }metho
+ d { $name="setIlluminancePreference" $arguments="{enums.IlluminanceGo
+ al}" $names="{illuminanceGoal}" }method { $name="getIlluminancePrefer
+ ence" $return="enums.IlluminanceGoal" }}}
+

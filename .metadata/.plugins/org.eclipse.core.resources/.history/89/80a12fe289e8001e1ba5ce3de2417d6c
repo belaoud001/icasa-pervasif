@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipojo xmlns="org.apache.felix.ipojo">
+  <component name="FrenchGreetingProvider">
+    <provides specifications="service.Hello">
+      <property name="language" type="java.lang.String" value="french"/>
+    </provides>
+    <callback method="start" transition="validate"/>
+    <callback method="stop" transition="invalidate"/>
+  </component>
+</ipojo>

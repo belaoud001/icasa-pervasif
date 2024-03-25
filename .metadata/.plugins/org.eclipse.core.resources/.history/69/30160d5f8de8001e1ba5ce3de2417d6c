@@ -1,0 +1,17 @@
+package lights;
+
+import fr.liglab.adele.icasa.device.presence.PresenceSensor;
+import fr.liglab.adele.icasa.device.light.BinaryLight;
+
+public class BinaryLightImpl {
+
+	/** Field for PresenceSensors dependency */
+	private PresenceSensor[] PresenceSensors;
+	/** Field for binaryLights dependency */
+	private BinaryLight[] binaryLights;
+	/** Bind Method for binaryLights dependency */
+	public void bindBinaryLight(BinaryLight binaryLight, Map properties){
+	// TODO: Add your implementation code here
+	}
+
+}

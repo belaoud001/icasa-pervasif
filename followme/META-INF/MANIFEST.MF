@@ -1,0 +1,127 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: follow-me
+Bundle-SymbolicName: followme
+Bundle-Version: 1.0.0.qualifier
+Created-By: iPOJO 1.12.1
+Import-Package: configurations, fr.liglab.adele.icasa, fr.liglab.adele
+ .icasa.access, fr.liglab.adele.icasa.access.command, fr.liglab.adele.
+ icasa.application, fr.liglab.adele.icasa.application.impl, fr.liglab.
+ adele.icasa.application.impl.command, fr.liglab.adele.icasa.applicati
+ on.remote, fr.liglab.adele.icasa.application.remote.util, fr.liglab.a
+ dele.icasa.clockservice, fr.liglab.adele.icasa.clockservice.impl, fr.
+ liglab.adele.icasa.clockservice.util, fr.liglab.adele.icasa.command, 
+ fr.liglab.adele.icasa.command.handler, fr.liglab.adele.icasa.commands
+ , fr.liglab.adele.icasa.commands.impl, fr.liglab.adele.icasa.common, 
+ fr.liglab.adele.icasa.common.impl, fr.liglab.adele.icasa.common.xml.u
+ tils, fr.liglab.adele.icasa.dependency.manager.exception, fr.liglab.a
+ dele.icasa.device, fr.liglab.adele.icasa.device.bathroomscale, fr.lig
+ lab.adele.icasa.device.box, fr.liglab.adele.icasa.device.button, fr.l
+ iglab.adele.icasa.device.button.simulated, fr.liglab.adele.icasa.devi
+ ce.doorWindow, fr.liglab.adele.icasa.device.gasSensor, fr.liglab.adel
+ e.icasa.device.light, fr.liglab.adele.icasa.device.manager, fr.liglab
+ .adele.icasa.device.motion, fr.liglab.adele.icasa.device.power, fr.li
+ glab.adele.icasa.device.presence, fr.liglab.adele.icasa.device.securi
+ ty, fr.liglab.adele.icasa.device.settopbox, fr.liglab.adele.icasa.dev
+ ice.sound, fr.liglab.adele.icasa.device.sprinkler, fr.liglab.adele.ic
+ asa.device.temperature, fr.liglab.adele.icasa.device.util, fr.liglab.
+ adele.icasa.exception, fr.liglab.adele.icasa.frontend.services, fr.li
+ glab.adele.icasa.frontend.services.rest, fr.liglab.adele.icasa.fronte
+ nd.services.utils, fr.liglab.adele.icasa.listener, fr.liglab.adele.ic
+ asa.location, fr.liglab.adele.icasa.location.impl, fr.liglab.adele.ic
+ asa.location.util, fr.liglab.adele.icasa.remote.wisdom, fr.liglab.ade
+ le.icasa.remote.wisdom.util, fr.liglab.adele.icasa.service.location, 
+ fr.liglab.adele.icasa.service.preferences, fr.liglab.adele.icasa.serv
+ ice.scheduler, fr.liglab.adele.icasa.service.zone.dimension.calculato
+ r, fr.liglab.adele.icasa.service.zone.size.calculator, fr.liglab.adel
+ e.icasa.simulator, fr.liglab.adele.icasa.simulator.listener, fr.ligla
+ b.adele.icasa.simulator.listener.util, fr.liglab.adele.icasa.simulato
+ r.remote.wisdom.util, fr.liglab.adele.icasa.simulator.script.executor
+ , fr.liglab.adele.icasa.simulator.services, org.apache.felix.ipojo;ve
+ rsion="[1.12.1,2.0.0)", org.apache.felix.ipojo.architecture;version="
+ [1.12.1,2.0.0)", org.json, org.osgi.service.cm;version=1.2, org.osgi.
+ service.log;version=1.3
+iPOJO-Components: instance { $component="BinaryLight" $name="BinaryLig
+ ht-1" }component { $classname="lights.BinaryLightImpl" $name="BinaryL
+ ight" requires { $aggregate="true" $optional="true" $specification="f
+ r.liglab.adele.icasa.device.light.BinaryLight" $field="binaryLights" 
+ callback { $method="bindBinaryLight" $type="bind" }callback { $method
+ ="unbindBinaryLight" $type="unbind" }}requires { $aggregate="true" $o
+ ptional="true" $specification="fr.liglab.adele.icasa.device.presence.
+ PresenceSensor" $field="presenceSensors" callback { $method="bindPres
+ enceSensor" $type="bind" }callback { $method="unbindPresenceSensor" $
+ type="unbind" }}requires { $aggregate="true" $optional="true" $specif
+ ication="fr.liglab.adele.icasa.device.light.DimmerLight" $field="dimm
+ erLights" callback { $method="bindDimmerLights" $type="bind" }callbac
+ k { $method="unbindDimmerLights" $type="unbind" }}callback { $method=
+ "start" $transition="validate" }callback { $method="stop" $transition
+ ="invalidate" }provides { $specifications="configurations.FollowMeCon
+ figuration" }manipulation { $classname="lights.BinaryLightImpl" inter
+ face { $name="fr.liglab.adele.icasa.device.DeviceListener" }interface
+  { $name="configurations.FollowMeConfiguration" }field { $name="binar
+ yLights" $type="fr.liglab.adele.icasa.device.light.BinaryLight[]" }fi
+ eld { $name="dimmerLights" $type="fr.liglab.adele.icasa.device.light.
+ DimmerLight[]" }field { $name="maximumEnergyConsumptionAllowedInARoom
+ " $type="double" }field { $name="maximumLightsToTurnOnPerRoom" $type=
+ "int" }field { $name="presenceSensors" $type="fr.liglab.adele.icasa.d
+ evice.presence.PresenceSensor[]" }method { $name="start" }method { $n
+ ame="bindBinaryLight" $arguments="{fr.liglab.adele.icasa.device.light
+ .BinaryLight,java.util.Map}" $names="{binaryLight,properties}" }metho
+ d { $name="unbindBinaryLight" $arguments="{fr.liglab.adele.icasa.devi
+ ce.light.BinaryLight,java.util.Map}" $names="{binaryLight,properties}
+ " }method { $name="bindDimmerLights" $arguments="{fr.liglab.adele.ica
+ sa.device.light.DimmerLight,java.util.Map}" $names="{dimmerLight,prop
+ erties}" }method { $name="unbindDimmerLights" $arguments="{fr.liglab.
+ adele.icasa.device.light.DimmerLight,java.util.Map}" $names="{dimmerL
+ ight,properties}" }method { $name="bindPresenceSensor" $arguments="{f
+ r.liglab.adele.icasa.device.presence.PresenceSensor,java.util.Map}" $
+ names="{presenceSensor,properties}" }method { $name="unbindPresenceSe
+ nsor" $arguments="{fr.liglab.adele.icasa.device.presence.PresenceSens
+ or,java.util.Map}" $names="{presenceSensor,properties}" }method { $na
+ me="deviceAdded" $arguments="{fr.liglab.adele.icasa.device.GenericDev
+ ice}" $names="{genericDevice}" }method { $name="deviceEvent" $argumen
+ ts="{fr.liglab.adele.icasa.device.GenericDevice,java.lang.Object}" $n
+ ames="{genericDevice,object}" }method { $name="devicePropertyAdded" $
+ arguments="{fr.liglab.adele.icasa.device.GenericDevice,java.lang.Stri
+ ng}" $names="{genericDevice,name}" }method { $name="getAllBinaryLight
+ sAtLocation" $return="java.util.List" $arguments="{java.lang.String}"
+  $names="{location}" }method { $name="getAllDimmerLightsAtLocation" $
+ return="java.util.List" $arguments="{java.lang.String}" $names="{loca
+ tion}" }method { $name="getNumberOfBinaryLightsAtLocation" $return="i
+ nt" $arguments="{java.lang.String}" $names="{location}" }method { $na
+ me="getNumberOfDimmerLightsAtLocation" $return="int" $arguments="{jav
+ a.lang.String}" $names="{location}" }method { $name="devicePropertyMo
+ dified" $arguments="{fr.liglab.adele.icasa.device.GenericDevice,java.
+ lang.String,java.lang.Object,java.lang.Object}" $names="{device,prope
+ rtyName,oldValue,newValue}" }method { $name="devicePropertyRemoved" $
+ arguments="{fr.liglab.adele.icasa.device.GenericDevice,java.lang.Stri
+ ng}" $names="{genericDevice,name}" }method { $name="deviceRemoved" $a
+ rguments="{fr.liglab.adele.icasa.device.GenericDevice}" $names="{gene
+ ricDevice}" }method { $name="getMaximumNumberOfLightsToTurnOn" $retur
+ n="int" }method { $name="setMaximumNumberOfLightsToTurnOn" $arguments
+ ="{int}" $names="{maximumNumberOfLightsToTurnOn}" }method { $name="ge
+ tMaximumAllowedEnergyPerRoom" $return="double" }method { $name="compu
+ teLightsConsideringEnergyLimits" $return="int" }method { $name="getTu
+ rnedOnBinaryLightsAtLocation" $return="java.util.List" $arguments="{j
+ ava.lang.String}" $names="{location}" }method { $name="getNumberOfTur
+ nedOnBinaryLightsAtLocation" $return="int" $arguments="{java.lang.Str
+ ing}" $names="{location}" }method { $name="getTurnedOnDimmerLightsAtL
+ ocation" $return="java.util.List" $arguments="{java.lang.String}" $na
+ mes="{location}" }method { $name="getNumberOfTurnedOnDimmerLightsAtLo
+ cation" $return="int" $arguments="{java.lang.String}" $names="{locati
+ on}" }method { $name="getNumberOfTurnedOnLightsAtLocation" $return="i
+ nt" $arguments="{java.lang.String}" $names="{location}" }method { $na
+ me="getNumberOfLightsAtLocation" $return="int" $arguments="{java.lang
+ .String}" $names="{location}" }method { $name="turnOnLightsAtLocation
+ " $arguments="{int,java.lang.String}" $names="{numberOfLights,locatio
+ n}" }method { $name="turnOffLightsAtLocation" $arguments="{int,java.l
+ ang.String}" $names="{numberOfLights,location}" }method { $name="setu
+ pBinaryLightsAtLocation" $arguments="{int,java.lang.String,boolean}" 
+ $names="{numberOfBinaryLights,location,turnOn}" }method { $name="setu
+ pDimmerLightsAtLocation" $arguments="{int,java.lang.String,boolean}" 
+ $names="{numberOfDimmerLights,location,turnOn}" }method { $name="upda
+ teLightsStateAtLocation" $arguments="{int,java.lang.String}" $names="
+ {numberOfTurnedOnLightsAllowedAtLocation,location}" }method { $name="
+ setMaximumAllowedEnergyInRoom" $arguments="{double}" $names="{maximum
+ Energy}" }method { $name="stop" }}}
+

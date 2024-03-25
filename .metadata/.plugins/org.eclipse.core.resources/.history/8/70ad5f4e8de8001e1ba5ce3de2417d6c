@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipojo xmlns="org.apache.felix.ipojo">
+  <component name="BinaryLight">
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.light.BinaryLight" field="binaryLights">
+      <callback method="bindBinaryLight" type="bind"/>
+      <callback method="unbindBinaryLight" type="unbind"/>
+    </requires>
+  </component>
+</ipojo>

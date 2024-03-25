@@ -1,0 +1,22 @@
+{
+  "C:\\Program Files\\Java\\jre1.8.0_202\\lib\\rt.jar": {
+    "location": "C:\\Program Files\\Java\\jre1.8.0_202\\lib\\rt.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027C:\\Program Files\\Java\\jre1.8.0_202\\lib\\rt.jar\u0027. Neither fingerprint \u002777e00b60e3f22736dc83c52cd3c0323a8d1fec4b\u0027 nor symbolic name \u0027jre\u0027 are known."
+  },
+  "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution-1.2.7-SNAPSHOT\\icasa.teaching.distribution\\runtime\\context.api-1.2.7-SNAPSHOT.jar": {
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution-1.2.7-SNAPSHOT\\icasa.teaching.distribution\\runtime\\context.api-1.2.7-SNAPSHOT.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution-1.2.7-SNAPSHOT\\icasa.teaching.distribution\\runtime\\context.api-1.2.7-SNAPSHOT.jar\u0027. Neither fingerprint \u0027ee1748f1572edc5275feaa774728708fa445497d\u0027 nor symbolic name \u0027context.api\u0027 are known."
+  },
+  "C:\\Users\\abdel\\icaasaa\\HServices\\src": {
+    "location": "C:\\Users\\abdel\\icaasaa\\HServices\\src",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027C:\\Users\\abdel\\icaasaa\\HServices\\src\u0027. Neither fingerprint \u0027null\u0027 nor symbolic name \u0027HServices\u0027 are known."
+  },
+  "C:\\Users\\abdel\\icaasaa\\followme.administration\\src": {
+    "location": "C:\\Users\\abdel\\icaasaa\\followme.administration\\src",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027C:\\Users\\abdel\\icaasaa\\followme.administration\\src\u0027. Neither fingerprint \u0027null\u0027 nor symbolic name \u0027followme.administration\u0027 are known."
+  }
+}

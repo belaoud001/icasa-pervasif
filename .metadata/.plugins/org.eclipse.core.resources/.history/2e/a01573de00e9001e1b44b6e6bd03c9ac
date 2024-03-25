@@ -1,0 +1,29 @@
+package managers;
+
+import configurations.FollowMeConfiguration;
+
+public class FollowMeManagerImpl implements FollowMeConfiguration {
+
+	public int getMaximumNumberOfLightsToTurnOn() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public void setMaximumNumberOfLightsToTurnOn(int maximumNumberOfLightsToTurnOn) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/** Component Lifecycle Method */
+	public void stop() {
+		// TODO: Add your implementation code here
+		System.out.println("The follow me manager is stopping");
+	}
+
+	/** Component Lifecycle Method */
+	public void start() {
+		// TODO: Add your implementation code here
+		System.out.println("The follow me manager is starting");
+	}
+
+}

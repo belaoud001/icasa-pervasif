@@ -1,0 +1,63 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: follow-me-manager
+Bundle-SymbolicName: followme.manager
+Bundle-Version: 1.0.0.qualifier
+Created-By: iPOJO 1.12.1
+Import-Package: administrations, configurations, enums, fr.liglab.adel
+ e.icasa, fr.liglab.adele.icasa.access, fr.liglab.adele.icasa.access.c
+ ommand, fr.liglab.adele.icasa.application, fr.liglab.adele.icasa.appl
+ ication.impl, fr.liglab.adele.icasa.application.impl.command, fr.ligl
+ ab.adele.icasa.application.remote, fr.liglab.adele.icasa.application.
+ remote.util, fr.liglab.adele.icasa.clockservice, fr.liglab.adele.icas
+ a.clockservice.impl, fr.liglab.adele.icasa.clockservice.util, fr.ligl
+ ab.adele.icasa.command, fr.liglab.adele.icasa.command.handler, fr.lig
+ lab.adele.icasa.commands, fr.liglab.adele.icasa.commands.impl, fr.lig
+ lab.adele.icasa.common, fr.liglab.adele.icasa.common.impl, fr.liglab.
+ adele.icasa.common.xml.utils, fr.liglab.adele.icasa.dependency.manage
+ r.exception, fr.liglab.adele.icasa.device, fr.liglab.adele.icasa.devi
+ ce.bathroomscale, fr.liglab.adele.icasa.device.box, fr.liglab.adele.i
+ casa.device.button, fr.liglab.adele.icasa.device.button.simulated, fr
+ .liglab.adele.icasa.device.doorWindow, fr.liglab.adele.icasa.device.g
+ asSensor, fr.liglab.adele.icasa.device.light, fr.liglab.adele.icasa.d
+ evice.manager, fr.liglab.adele.icasa.device.motion, fr.liglab.adele.i
+ casa.device.power, fr.liglab.adele.icasa.device.presence, fr.liglab.a
+ dele.icasa.device.security, fr.liglab.adele.icasa.device.settopbox, f
+ r.liglab.adele.icasa.device.sound, fr.liglab.adele.icasa.device.sprin
+ kler, fr.liglab.adele.icasa.device.temperature, fr.liglab.adele.icasa
+ .device.util, fr.liglab.adele.icasa.exception, fr.liglab.adele.icasa.
+ frontend.services, fr.liglab.adele.icasa.frontend.services.rest, fr.l
+ iglab.adele.icasa.frontend.services.utils, fr.liglab.adele.icasa.list
+ ener, fr.liglab.adele.icasa.location, fr.liglab.adele.icasa.location.
+ impl, fr.liglab.adele.icasa.location.util, fr.liglab.adele.icasa.remo
+ te.wisdom, fr.liglab.adele.icasa.remote.wisdom.util, fr.liglab.adele.
+ icasa.service.location, fr.liglab.adele.icasa.service.preferences, fr
+ .liglab.adele.icasa.service.scheduler, fr.liglab.adele.icasa.service.
+ zone.dimension.calculator, fr.liglab.adele.icasa.service.zone.size.ca
+ lculator, fr.liglab.adele.icasa.simulator, fr.liglab.adele.icasa.simu
+ lator.listener, fr.liglab.adele.icasa.simulator.listener.util, fr.lig
+ lab.adele.icasa.simulator.remote.wisdom.util, fr.liglab.adele.icasa.s
+ imulator.script.executor, fr.liglab.adele.icasa.simulator.services, o
+ rg.apache.felix.ipojo;version="[1.12.1,2.0.0)", org.apache.felix.ipoj
+ o.architecture;version="[1.12.1,2.0.0)", org.json, org.osgi.service.c
+ m;version=1.2, org.osgi.service.log;version=1.3
+iPOJO-Components: instance { $component="FollowMeManager" $name="Follo
+ wMeManager-1" }component { $classname="managers.FollowMeManagerImpl" 
+ $name="FollowMeManager" callback { $method="start" $transition="valid
+ ate" }callback { $method="stop" $transition="invalidate" }requires { 
+ $specification="configurations.FollowMeConfiguration" $field="followM
+ eConfiguration" }provides { $specifications="administrations.FollowMe
+ Administration" }manipulation { $classname="managers.FollowMeManagerI
+ mpl" interface { $name="administrations.FollowMeAdministration" }fiel
+ d { $name="followMeConfiguration" $type="configurations.FollowMeConfi
+ guration" }method { $name="start" }method { $name="getCurrentMaxLight
+ " $return="int" }method { $name="getCurrentEnergyGoal" $return="doubl
+ e" }method { $name="configureMaxLight" $arguments="{int}" $names="{nu
+ mberOfLights}" }method { $name="configureMaxAllowedEnergy" $arguments
+ ="{double}" $names="{energyAllowed}" }method { $name="setIlluminanceP
+ reference" $arguments="{enums.IlluminanceGoal}" $names="{illuminanceG
+ oal}" }method { $name="getIlluminancePreference" $return="enums.Illum
+ inanceGoal" }method { $name="setEnergySavingGoal" $arguments="{enums.
+ EnergyGoal}" $names="{energyGoal}" }method { $name="getEnergyGoal" $r
+ eturn="enums.EnergyGoal" }method { $name="stop" }}}
+

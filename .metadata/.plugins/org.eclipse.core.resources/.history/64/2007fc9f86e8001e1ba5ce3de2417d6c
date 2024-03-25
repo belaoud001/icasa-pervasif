@@ -1,0 +1,12 @@
+package providers;
+
+import service.Hello;
+
+public class EnglishGreetingProviderImplImplImpl implements Hello {
+
+	public void greetClient(String name) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

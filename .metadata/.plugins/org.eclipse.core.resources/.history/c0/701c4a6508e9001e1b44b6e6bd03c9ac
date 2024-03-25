@@ -1,0 +1,20 @@
+package managers;
+
+import configurations.FollowMeConfiguration;
+
+public class FollowMeManagerImpl {
+
+	/** Field for FollowMeConfiguration dependency */
+	private FollowMeConfiguration FollowMeConfiguration;
+
+	/** Component Lifecycle Method */
+	public void stop(){
+	// TODO: Add your implementation code here
+	}
+
+	/** Component Lifecycle Method */
+	public void start(){
+	// TODO: Add your implementation code here
+	}
+
+}

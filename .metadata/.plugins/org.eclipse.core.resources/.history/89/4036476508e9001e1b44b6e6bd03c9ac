@@ -1,0 +1,10 @@
+package managers;
+
+import configurations.FollowMeConfiguration;
+
+public class FollowMeManagerImpl {
+
+	/** Field for FollowMeConfiguration dependency */
+	private FollowMeConfiguration FollowMeConfiguration;
+
+}

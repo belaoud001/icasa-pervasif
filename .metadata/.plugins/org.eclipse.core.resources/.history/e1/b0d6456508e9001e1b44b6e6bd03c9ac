@@ -1,0 +1,8 @@
+package managers;
+
+public class FollowMeManagerImpl {
+
+	/** Field for FollowMeConfiguration dependency */
+	private FollowMeConfiguration FollowMeConfiguration;
+
+}

@@ -1,0 +1,180 @@
+package lights;
+
+import constants.Constants;
+import fr.liglab.adele.icasa.device.DeviceListener;
+import fr.liglab.adele.icasa.device.GenericDevice;
+import fr.liglab.adele.icasa.device.presence.PresenceSensor;
+import fr.liglab.adele.icasa.device.light.BinaryLight;
+
+import java.util.*;
+
+import configurations.FollowMeConfiguration;
+
+public class BinaryLightImpl implements DeviceListener, FollowMeConfiguration {
+
+	private int maximumLightsToTurnOnPerRoom = 1;
+	private double maximumEnergyConsumptionAllowedInARoom = 100.0d;
+	private PresenceSensor[] presenceSensors;
+	private BinaryLight[] binaryLights;
+
+	public BinaryLightImpl() {
+		setMaximumAllowedEnergyInRoom(maximumEnergyConsumptionAllowedInARoom);
+	}
+
+	public void start() {
+		System.out.println("Binary light component is starting ...");
+	}
+
+	public void bindBinaryLight(BinaryLight binaryLight, Map properties) {
+		System.out.println("Bind binary light " + binaryLight.getSerialNumber());
+	}
+
+	public void unbindBinaryLight(BinaryLight binaryLight, Map properties) {
+		System.out.println("Unbind binary light " + binaryLight.getSerialNumber());
+	}
+
+	public void bindPresenceSensor(PresenceSensor presenceSensor, Map properties) {
+		System.out.println("Bind presence sensor " + presenceSensor.getSerialNumber());
+		presenceSensor.addListener(this);
+	}
+
+	public void unbindPresenceSensor(PresenceSensor presenceSensor, Map properties) {
+		System.out.println("Unbind presence sensor " + presenceSensor.getSerialNumber());
+		presenceSensor.removeListener(this); //..
+	}
+
+	public void deviceAdded(GenericDevice genericDevice) {
+		System.err.println("This method is not implemented yet ...");
+	}
+
+	public void deviceEvent(GenericDevice genericDevice, Object object) {
+		System.err.println("This method is not implemented yet ...");
+	}
+
+	public void devicePropertyAdded(GenericDevice genericDevice, String name) {
+		System.err.println("This method is not implemented yet ...");
+	}
+
+	private synchronized List<BinaryLight> getAllBinaryLightsAtLocation(String location) {
+		List<BinaryLight> binaryLightsLocation = new ArrayList<BinaryLight>();
+
+		for (BinaryLight binaryLight : binaryLights)
+			if (binaryLight.getPropertyValue(Constants.LOCATION_PROPERTY_NAME).equals(location))
+				binaryLightsLocation.add(binaryLight);
+
+		return binaryLightsLocation;
+	}
+
+	private synchronized int getNumberOfBinaryLightsAtLocation(String location) {
+		return getAllBinaryLightsAtLocation(location).size();
+	}
+
+	public void devicePropertyModified(GenericDevice device, String propertyName, Object oldValue, Object newValue) {
+		if (device instanceof PresenceSensor && propertyName.equals(PresenceSensor.PRESENCE_SENSOR_SENSED_PRESENCE)) {
+			PresenceSensor presenceSensor = (PresenceSensor) device;
+			String location = (String) presenceSensor.getPropertyValue(Constants.LOCATION_PROPERTY_NAME);
+
+			if (!Constants.LOCATION_UNKNOWN.equals(location)) {
+				int tempMaxLights = maximumLightsToTurnOnPerRoom;
+				List<BinaryLight> binaryLights = getAllBinaryLightsAtLocation(location);
+
+				for (BinaryLight binaryLight : binaryLights) {
+					if (tempMaxLights-- == 0) break;
+
+					if (presenceSensor.getSensedPresence())
+						binaryLight.turnOn();
+					else
+						binaryLight.turnOff();
+				}
+			}
+		}
+	}
+
+	public void devicePropertyRemoved(GenericDevice genericDevice, String name) {
+		System.err.println("This method is not implemented yet ...");
+	}
+
+	public void deviceRemoved(GenericDevice genericDevice) {
+		System.err.println("This method is not implemented yet ...");
+	}
+
+	public int getMaximumNumberOfLightsToTurnOn() {
+		return maximumLightsToTurnOnPerRoom;
+	}
+
+	public void setMaximumNumberOfLightsToTurnOn(int maximumNumberOfLightsToTurnOn) {
+		maximumLightsToTurnOnPerRoom = maximumNumberOfLightsToTurnOn;
+	}
+
+	public double getMaximumAllowedEnergyPerRoom() {
+		return maximumEnergyConsumptionAllowedInARoom;
+	}
+
+	private int computeLightsConsideringEnergyLimits() {
+		return (int) (maximumEnergyConsumptionAllowedInARoom / Constants.BINARY_LIGHT_CONSUMPTION);
+	}
+
+	private synchronized List<BinaryLight> getTurnedOnBinaryLightsAtLocation(String location) {
+		List<BinaryLight> binaryLightsLocation = new ArrayList<BinaryLight>();
+
+		for (BinaryLight binaryLight : binaryLights)
+			if (binaryLight.getPowerStatus() && binaryLight.getPropertyValue(Constants.LOCATION_PROPERTY_NAME).equals(location))
+				binaryLightsLocation.add(binaryLight);
+
+		return binaryLightsLocation;
+	}
+
+	private int getNumberOfTurnedOnBinaryLightsAtLocation(String location) {
+		return getTurnedOnBinaryLightsAtLocation(location).size();
+	}
+
+	private void switchBinaryLightAtLocation(int numberOfBinaryLights, boolean turnOn) {
+		for (BinaryLight binaryLight : binaryLights) {
+			if (numberOfBinaryLights-- == 0) break;
+			if (turnOn && !binaryLight.getPowerStatus())
+				binaryLight.turnOn();
+			else if (!turnOn && binaryLight.getPowerStatus())
+				binaryLight.turnOff();
+		}
+	}
+
+	private void updateBinaryLightsStateAtLocation(int numberOfTurnedOnLightsAllowedAtLocation, String location) {
+		int numberOfBinaryLightsAtLocation   = getNumberOfBinaryLightsAtLocation(location);
+		int numberOfTurnedOnLightsAtLocation = getNumberOfTurnedOnBinaryLightsAtLocation(location);
+
+		if(numberOfTurnedOnLightsAllowedAtLocation > numberOfBinaryLightsAtLocation)
+			numberOfTurnedOnLightsAllowedAtLocation = numberOfBinaryLightsAtLocation;
+
+		if (numberOfTurnedOnLightsAllowedAtLocation != numberOfTurnedOnLightsAtLocation) {
+			int numberOfBinaryLights = Math.abs(numberOfTurnedOnLightsAllowedAtLocation - numberOfTurnedOnLightsAtLocation);
+			boolean turnOn = numberOfTurnedOnLightsAllowedAtLocation > numberOfTurnedOnLightsAtLocation;
+
+			switchBinaryLightAtLocation(numberOfBinaryLights, turnOn);
+		}
+
+	}
+
+	public void setMaximumAllowedEnergyInRoom(double maximumEnergy) {
+		maximumEnergyConsumptionAllowedInARoom = maximumEnergy;
+		maximumLightsToTurnOnPerRoom = computeLightsConsideringEnergyLimits();
+
+		System.out.println("Maximum allowed energy per room has been updated successfully to : " + maximumEnergyConsumptionAllowedInARoom + " Watt.");
+		System.out.println("Using the given energy we can use a maximum of " + maximumLightsToTurnOnPerRoom + " per room.");
+
+		for (PresenceSensor presenceSensor : presenceSensors) {
+			if (presenceSensor.getSensedPresence()) {
+				String currentLocation = presenceSensor.getPropertyValue(Constants.LOCATION_PROPERTY_NAME).toString();
+
+				updateBinaryLightsStateAtLocation(maximumLightsToTurnOnPerRoom, currentLocation);
+			}
+		}
+	}
+
+	public void stop() {
+		System.out.println("Binary light component is stopping ...");
+
+		for (PresenceSensor sensor : presenceSensors)
+			sensor.removeListener(this);
+	}
+
+}

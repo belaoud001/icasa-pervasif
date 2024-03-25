@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="configuration.FollowMeConfiguration"/>
+<fullyQualifiedTypeName name="services.IHelloService"/>
+<fullyQualifiedTypeName name="fr.liglab.adele.icasa.device.DeviceListener"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.sun.xml.internal.bind.v2.schemagen.xmlschema.List"/>
+<fullyQualifiedTypeName name="configurations.FollowMeConfiguration"/>
+<fullyQualifiedTypeName name="org.apache.felix.ipojo.annotations.Component"/>
+<fullyQualifiedTypeName name="org.apache.felix.ipojo.annotations.Instantiate"/>
+<fullyQualifiedTypeName name="fr.liglab.adele.icasa.command.handler.CommandProvider"/>
+<fullyQualifiedTypeName name="org.apache.felix.ipojo.annotations.Requires"/>
+<fullyQualifiedTypeName name="administrations.FollowMeAdministration"/>
+<fullyQualifiedTypeName name="fr.liglab.adele.icasa.command.handler.Command"/>
+<fullyQualifiedTypeName name="enums.IlluminanceGoal"/>
+</qualifiedTypeNameHistroy>
