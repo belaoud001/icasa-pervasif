@@ -7393,3 +7393,22 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.e
 
 !ENTRY org.eclipse.ui 2 2 2024-03-25 09:59:59.669
 !MESSAGE Invalid preference category path: metadata.ipojo.editor.general (bundle: ipojo.preferences, page: metadata.ipojo.editor.deploymentPage)
+!SESSION 2024-03-25 17:42:03.757 -----------------------------------------------
+eclipse.buildId=I20120608-1400
+java.version=1.8.0_202
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.ow2.chameleon.eclipse.ipojo.nature 2 0 2024-03-25 17:42:59.497
+!MESSAGE followme.administration: Neither component types, nor instances in the XML metadata
+
+!ENTRY org.ow2.chameleon.eclipse.ipojo.nature 2 0 2024-03-25 17:42:59.593
+!MESSAGE followme.command: Neither component types, nor instances in the XML metadata
+
+!ENTRY org.ow2.chameleon.eclipse.ipojo.nature 2 0 2024-03-25 17:42:59.653
+!MESSAGE followme.configuration: Neither component types, nor instances in the XML metadata
+
+!ENTRY org.ow2.chameleon.eclipse.ipojo.nature 2 0 2024-03-25 17:42:59.809
+!MESSAGE hello.service: Neither component types, nor instances in the XML metadata

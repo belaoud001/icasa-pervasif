@@ -4,6 +4,7 @@ Bundle-Name: hello-service
 Bundle-SymbolicName: hello.service
 Bundle-Version: 1.0.0.qualifier
 Created-By: iPOJO 1.12.1
+Export-Package: service
 Import-Package: fr.liglab.adele.icasa, fr.liglab.adele.icasa.access, f
  r.liglab.adele.icasa.access.command, fr.liglab.adele.icasa.applicatio
  n, fr.liglab.adele.icasa.application.impl, fr.liglab.adele.icasa.appl
@@ -41,5 +42,4 @@ Import-Package: fr.liglab.adele.icasa, fr.liglab.adele.icasa.access, f
  .0.0)", org.apache.felix.ipojo.architecture;version="[1.12.1,2.0.0)",
   org.json, org.osgi.service.cm;version=1.2, org.osgi.service.log;vers
  ion=1.3
-Export-Package: service
 

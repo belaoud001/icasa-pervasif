@@ -36,6 +36,11 @@ public class BinaryLightImpl implements DeviceListener, FollowMeConfiguration {
 
 	public void unbindBinaryLight(BinaryLight binaryLight, Map properties) {
 		System.out.println("Unbind binary light " + binaryLight.getSerialNumber());
+
+		if (binaryLight.getPowerStatus()) {
+			turnOnLightsAtLocation(maximumLightsToTurnOnPerRoom,
+					(String) binaryLight.getPropertyValue(Constants.LOCATION_PROPERTY_NAME));
+		}
 	}
 
 	public void bindDimmerLights(DimmerLight dimmerLight, Map properties) {
