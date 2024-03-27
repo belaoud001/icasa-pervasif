@@ -11,7 +11,7 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-public class MailSenderImpl implements git MailSender {
+public class MailSenderImpl implements MailSender {
 
 	public void start() {
 		System.out.println("Mail sender component is starting ...");

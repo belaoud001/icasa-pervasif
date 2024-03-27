@@ -12,40 +12,41 @@
       <sourceFolder url="file://$MODULE_DIR$/hello.english.provider/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/hello.french.provider/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/hello.service/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/mail.service/src" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="file://$USER_HOME$/Downloads/icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT/icasa.teaching.distribution.with.apps/bin" />
+          <root url="file://$USER_HOME$/Downloads/icasa.teaching.distribution.with.apps/bin" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="file://$USER_HOME$/Downloads/icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT/icasa.teaching.distribution.with.apps/bin" />
+          <root url="file://$USER_HOME$/Downloads/icasa.teaching.distribution.with.apps/bin" />
         </SOURCES>
-        <jarDirectory url="file://$USER_HOME$/Downloads/icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT/icasa.teaching.distribution.with.apps/bin" recursive="false" />
-        <jarDirectory url="file://$USER_HOME$/Downloads/icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT/icasa.teaching.distribution.with.apps/bin" recursive="false" type="SOURCES" />
+        <jarDirectory url="file://$USER_HOME$/Downloads/icasa.teaching.distribution.with.apps/bin" recursive="false" />
+        <jarDirectory url="file://$USER_HOME$/Downloads/icasa.teaching.distribution.with.apps/bin" recursive="false" type="SOURCES" />
       </library>
     </orderEntry>
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="file://$USER_HOME$/Downloads/icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT/icasa.teaching.distribution.with.apps/core" />
+          <root url="file://$USER_HOME$/Downloads/icasa.teaching.distribution.with.apps/core" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
-        <jarDirectory url="file://$USER_HOME$/Downloads/icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT/icasa.teaching.distribution.with.apps/core" recursive="false" />
+        <jarDirectory url="file://$USER_HOME$/Downloads/icasa.teaching.distribution.with.apps/core" recursive="false" />
       </library>
     </orderEntry>
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="file://$USER_HOME$/Downloads/icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT/icasa.teaching.distribution.with.apps/runtime" />
+          <root url="file://$USER_HOME$/Downloads/icasa.teaching.distribution.with.apps/runtime" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
-        <jarDirectory url="file://$USER_HOME$/Downloads/icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT/icasa.teaching.distribution.with.apps/runtime" recursive="false" />
+        <jarDirectory url="file://$USER_HOME$/Downloads/icasa.teaching.distribution.with.apps/runtime" recursive="false" />
       </library>
     </orderEntry>
   </component>
