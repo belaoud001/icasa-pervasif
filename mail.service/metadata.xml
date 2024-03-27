@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipojo xmlns="org.apache.felix.ipojo">
+  <component classname="mail.services.MailSenderImpl" name="MailSender">
+    <provides specifications="mail.services.MailSender"/>
+    <callback method="start" transition="validate"/>
+    <callback method="stop" transition="invalidate"/>
+  </component>
+  <instance component="MailSender" name="MailSender-1"/>
+</ipojo>
