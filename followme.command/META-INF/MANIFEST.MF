@@ -49,11 +49,13 @@ iPOJO-Components: instance { $name="commands" $component="commands.Fol
  icasa.command.handler:command { $method="setIlluminancePreference" }f
  r.liglab.adele.icasa.command.handler:command { $method="getEnergyGoal
  " }fr.liglab.adele.icasa.command.handler:command { $method="setEnergy
- SavingGoal" }}requires { $field="followMeAdministration" }manipulatio
- n { $classname="commands.FollowMeCommand" field { $name="followMeAdmi
- nistration" $type="administrations.FollowMeAdministration" }method { 
- $name="getIlluminancePreference" }method { $name="setIlluminancePrefe
- rence" $arguments="{java.lang.String}" $names="{illuminancePreference
- }" }method { $name="getEnergyGoal" }method { $name="setEnergySavingGo
- al" $arguments="{java.lang.String}" $names="{energySavingGoal}" }}}
+ SavingGoal" }fr.liglab.adele.icasa.command.handler:command { $method=
+ "test" }}requires { $field="followMeAdministration" }manipulation { $
+ classname="commands.FollowMeCommand" field { $name="followMeAdministr
+ ation" $type="administrations.FollowMeAdministration" }method { $name
+ ="getIlluminancePreference" }method { $name="setIlluminancePreference
+ " $arguments="{java.lang.String}" $names="{illuminancePreference}" }m
+ ethod { $name="getEnergyGoal" }method { $name="setEnergySavingGoal" $
+ arguments="{java.lang.String}" $names="{energySavingGoal}" }method { 
+ $name="test" }}}
 

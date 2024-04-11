@@ -53,4 +53,8 @@ public class FollowMeCommand {
         }
     }
 	
+    @Command
+    public void test(){
+        System.out.println("teste");
+    }
 }

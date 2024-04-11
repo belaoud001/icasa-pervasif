@@ -1,9 +1,0 @@
-package services;
-
-public interface FollowMeConfiguration {
-	
-    public int getMaximumNumberOfLightsToTurnOn();
- 
-    public void setMaximumNumberOfLightsToTurnOn(int maximumNumberOfLightsToTurnOn);
-    
-}

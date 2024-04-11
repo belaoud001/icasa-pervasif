@@ -1,8 +1,0 @@
-package clients;
-
-public class HelloClientImpl {
-
-	/** Field for greetingServices dependency */
-	private Hello[] greetingServices;
-
-}

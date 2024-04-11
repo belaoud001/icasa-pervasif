@@ -1,9 +1,0 @@
-package administrations;
-
-public interface FollowMeAdministration {
-
-    public void setIlluminancePreference(IlluminanceGoal illuminanceGoal);
- 
-    public IlluminanceGoal getIlluminancePreference();
-    
-}

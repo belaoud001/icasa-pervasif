@@ -18,5 +18,10 @@
     "location": "C:\\Users\\abdel\\icaasaa\\followme.administration\\src",
     "status": "UNRESOLVED",
     "error": "No call model found for \u0027C:\\Users\\abdel\\icaasaa\\followme.administration\\src\u0027. Neither fingerprint \u0027null\u0027 nor symbolic name \u0027followme.administration\u0027 are known."
+  },
+  "C:\\Users\\abdel\\icaasaa\\mail.service\\src": {
+    "location": "C:\\Users\\abdel\\icaasaa\\mail.service\\src",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027C:\\Users\\abdel\\icaasaa\\mail.service\\src\u0027. Neither fingerprint \u0027null\u0027 nor symbolic name \u0027mail.service\u0027 are known."
   }
 }

@@ -39,6 +39,19 @@
     "javaRuntime": true
   },
   {
+    "symbolicName": "simulator.api",
+    "version": {
+      "major": 1,
+      "minor": 2,
+      "micro": 7,
+      "qualifier": "SNAPSHOT"
+    },
+    "jarFileFingerprint": "9e654ce48e1923b9d500c92fc722af4fa85644dd",
+    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\runtime\\simulator.api-1.2.7-SNAPSHOT.jar",
+    "javaRuntime": false
+  },
+  {
     "symbolicName": "jre",
     "version": {
       "major": 1,
@@ -52,6 +65,32 @@
     "javaRuntime": true
   },
   {
+    "symbolicName": "application.api",
+    "version": {
+      "major": 1,
+      "minor": 2,
+      "micro": 7,
+      "qualifier": "SNAPSHOT"
+    },
+    "jarFileFingerprint": "088ffd3ff188f7cf3036757d1be4c4cf5f2bbbe0",
+    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\runtime\\application.api-1.2.7-SNAPSHOT.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "application.impl",
+    "version": {
+      "major": 1,
+      "minor": 2,
+      "micro": 7,
+      "qualifier": "SNAPSHOT"
+    },
+    "jarFileFingerprint": "7ebdf336c09926389488e752511ce3d3145a2855",
+    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\runtime\\application.impl-1.2.7-SNAPSHOT.jar",
+    "javaRuntime": false
+  },
+  {
     "symbolicName": "jre",
     "version": {
       "major": 1,
@@ -63,6 +102,19 @@
     "jarFileModificationDate": "2024-02-08T11:27:20.830+01:00",
     "location": "C:\\Program Files\\Java\\jre1.8.0_202\\lib\\ext\\jfxrt.jar",
     "javaRuntime": true
+  },
+  {
+    "symbolicName": "simulator.remote",
+    "version": {
+      "major": 1,
+      "minor": 2,
+      "micro": 7,
+      "qualifier": "SNAPSHOT"
+    },
+    "jarFileFingerprint": "b69c9dcbebaa42a17d3e38c10a6179a9c74b7996",
+    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\runtime\\simulator.remote-1.2.7-SNAPSHOT.jar",
+    "javaRuntime": false
   },
   {
     "symbolicName": "jre",
@@ -91,32 +143,6 @@
     "javaRuntime": true
   },
   {
-    "symbolicName": "common",
-    "version": {
-      "major": 1,
-      "minor": 2,
-      "micro": 7,
-      "qualifier": "SNAPSHOT"
-    },
-    "jarFileFingerprint": "f240d89b19b4cdc06a9162a230f54e52fdf3a845",
-    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
-    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT\\icasa.teaching.distribution.with.apps\\runtime\\common-1.2.7-SNAPSHOT.jar",
-    "javaRuntime": false
-  },
-  {
-    "symbolicName": "technical.services.api",
-    "version": {
-      "major": 1,
-      "minor": 2,
-      "micro": 7,
-      "qualifier": "SNAPSHOT"
-    },
-    "jarFileFingerprint": "f67f1fdc7bbb9ece8d4d0afa39b575ce27aaad13",
-    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
-    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT\\icasa.teaching.distribution.with.apps\\runtime\\technical.services.api-1.2.7-SNAPSHOT.jar",
-    "javaRuntime": false
-  },
-  {
     "symbolicName": "jre",
     "version": {
       "major": 1,
@@ -128,19 +154,6 @@
     "jarFileModificationDate": "2024-02-08T11:27:20.834+01:00",
     "location": "C:\\Program Files\\Java\\jre1.8.0_202\\lib\\ext\\sunec.jar",
     "javaRuntime": true
-  },
-  {
-    "symbolicName": "access.manager.impl",
-    "version": {
-      "major": 1,
-      "minor": 2,
-      "micro": 7,
-      "qualifier": "SNAPSHOT"
-    },
-    "jarFileFingerprint": "96bc94ba18a8c566c0723f6e26dc0795510a3bd4",
-    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
-    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT\\icasa.teaching.distribution.with.apps\\runtime\\access.manager.impl-1.2.7-SNAPSHOT.jar",
-    "javaRuntime": false
   },
   {
     "symbolicName": "jre",
@@ -156,6 +169,18 @@
     "javaRuntime": true
   },
   {
+    "symbolicName": "mail.service",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": "qualifier"
+    },
+    "jarFileModificationDate": "2024-03-26T13:39:09.082+01:00",
+    "location": "C:\\Users\\abdel\\icaasaa\\mail.service\\src",
+    "javaRuntime": false
+  },
+  {
     "symbolicName": "jre",
     "version": {
       "major": 1,
@@ -169,16 +194,29 @@
     "javaRuntime": true
   },
   {
-    "symbolicName": "application.api",
+    "symbolicName": "access.manager.api",
     "version": {
       "major": 1,
       "minor": 2,
       "micro": 7,
       "qualifier": "SNAPSHOT"
     },
-    "jarFileFingerprint": "088ffd3ff188f7cf3036757d1be4c4cf5f2bbbe0",
+    "jarFileFingerprint": "04a4855becc47356e4fe0dcc86687bcc92bb9cc8",
     "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
-    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT\\icasa.teaching.distribution.with.apps\\runtime\\application.api-1.2.7-SNAPSHOT.jar",
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\runtime\\access.manager.api-1.2.7-SNAPSHOT.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "technical.services.api",
+    "version": {
+      "major": 1,
+      "minor": 2,
+      "micro": 7,
+      "qualifier": "SNAPSHOT"
+    },
+    "jarFileFingerprint": "f67f1fdc7bbb9ece8d4d0afa39b575ce27aaad13",
+    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\runtime\\technical.services.api-1.2.7-SNAPSHOT.jar",
     "javaRuntime": false
   },
   {
@@ -208,55 +246,16 @@
     "javaRuntime": true
   },
   {
-    "symbolicName": "application.impl",
+    "symbolicName": "clock.simulated.impl",
     "version": {
       "major": 1,
       "minor": 2,
       "micro": 7,
       "qualifier": "SNAPSHOT"
     },
-    "jarFileFingerprint": "7ebdf336c09926389488e752511ce3d3145a2855",
+    "jarFileFingerprint": "9b3923b5399703f9c780b4f2416fb9ca036ddbd0",
     "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
-    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT\\icasa.teaching.distribution.with.apps\\runtime\\application.impl-1.2.7-SNAPSHOT.jar",
-    "javaRuntime": false
-  },
-  {
-    "symbolicName": "application.remote",
-    "version": {
-      "major": 1,
-      "minor": 2,
-      "micro": 7,
-      "qualifier": "SNAPSHOT"
-    },
-    "jarFileFingerprint": "aaf25292edb587e369869579ec1895d8617c6626",
-    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
-    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT\\icasa.teaching.distribution.with.apps\\runtime\\application.remote-1.2.7-SNAPSHOT.jar",
-    "javaRuntime": false
-  },
-  {
-    "symbolicName": "gogo.adapter",
-    "version": {
-      "major": 1,
-      "minor": 2,
-      "micro": 7,
-      "qualifier": "SNAPSHOT"
-    },
-    "jarFileFingerprint": "a008c936613315a5943541d18fcf7fc87a526f67",
-    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
-    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT\\icasa.teaching.distribution.with.apps\\runtime\\gogo.adapter-1.2.7-SNAPSHOT.jar",
-    "javaRuntime": false
-  },
-  {
-    "symbolicName": "simulator.remote",
-    "version": {
-      "major": 1,
-      "minor": 2,
-      "micro": 7,
-      "qualifier": "SNAPSHOT"
-    },
-    "jarFileFingerprint": "b69c9dcbebaa42a17d3e38c10a6179a9c74b7996",
-    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
-    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT\\icasa.teaching.distribution.with.apps\\runtime\\simulator.remote-1.2.7-SNAPSHOT.jar",
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\runtime\\clock.simulated.impl-1.2.7-SNAPSHOT.jar",
     "javaRuntime": false
   },
   {
@@ -298,29 +297,16 @@
     "javaRuntime": false
   },
   {
-    "symbolicName": "clock.simulated.impl",
+    "symbolicName": "org.ow2.chameleon.json.json.org-implementation",
     "version": {
-      "major": 1,
-      "minor": 2,
-      "micro": 7,
-      "qualifier": "SNAPSHOT"
+      "major": 0,
+      "minor": 4,
+      "micro": 0,
+      "qualifier": ""
     },
-    "jarFileFingerprint": "9b3923b5399703f9c780b4f2416fb9ca036ddbd0",
+    "jarFileFingerprint": "ae538443a93e97bac09364b5d796f8d55a53e78d",
     "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
-    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT\\icasa.teaching.distribution.with.apps\\runtime\\clock.simulated.impl-1.2.7-SNAPSHOT.jar",
-    "javaRuntime": false
-  },
-  {
-    "symbolicName": "context.remote",
-    "version": {
-      "major": 1,
-      "minor": 2,
-      "micro": 7,
-      "qualifier": "SNAPSHOT"
-    },
-    "jarFileFingerprint": "6a2b35332e1555b511c54be6ad56d2e2f54a2ceb",
-    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
-    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT\\icasa.teaching.distribution.with.apps\\runtime\\context.remote-1.2.7-SNAPSHOT.jar",
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\runtime\\json-service-json.org-0.4.0.jar",
     "javaRuntime": false
   },
   {
@@ -331,8 +317,21 @@
       "micro": 0,
       "qualifier": "qualifier"
     },
-    "jarFileModificationDate": "2024-03-23T16:29:03.113+01:00",
+    "jarFileModificationDate": "2024-03-23T18:09:29.944+01:00",
     "location": "C:\\Users\\abdel\\icaasaa\\followme.command\\src",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "access.manager.impl",
+    "version": {
+      "major": 1,
+      "minor": 2,
+      "micro": 7,
+      "qualifier": "SNAPSHOT"
+    },
+    "jarFileFingerprint": "96bc94ba18a8c566c0723f6e26dc0795510a3bd4",
+    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\runtime\\access.manager.impl-1.2.7-SNAPSHOT.jar",
     "javaRuntime": false
   },
   {
@@ -349,19 +348,6 @@
     "javaRuntime": true
   },
   {
-    "symbolicName": "device.push.button",
-    "version": {
-      "major": 1,
-      "minor": 2,
-      "micro": 7,
-      "qualifier": "SNAPSHOT"
-    },
-    "jarFileFingerprint": "c3d9cee20a8e267d4ce166b93519ee27a0fbe6c2",
-    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
-    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT\\icasa.teaching.distribution.with.apps\\runtime\\device.push.button-1.2.7-SNAPSHOT.jar",
-    "javaRuntime": false
-  },
-  {
     "symbolicName": "hello.service",
     "version": {
       "major": 1,
@@ -371,6 +357,58 @@
     },
     "jarFileModificationDate": "2024-03-22T20:41:07.356+01:00",
     "location": "C:\\Users\\abdel\\icaasaa\\hello.service\\src",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.wisdom.framework.wisdom.mailer",
+    "version": {
+      "major": 0,
+      "minor": 5,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "464239a9b67726d84c49a1cc08394e6d66464718",
+    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\runtime\\wisdom-mailer-0.5.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "context.api",
+    "version": {
+      "major": 1,
+      "minor": 2,
+      "micro": 7,
+      "qualifier": "SNAPSHOT"
+    },
+    "jarFileFingerprint": "ed5205c7b7e633c5d23343522b4acf3e1de63576",
+    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\runtime\\context.api-1.2.7-SNAPSHOT.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.apache.felix.ipojo",
+    "version": {
+      "major": 1,
+      "minor": 12,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "63d0902d40e5607e5b322fc9da8867b145bcdad3",
+    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\core\\org.apache.felix.ipojo-1.12.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "context.impl",
+    "version": {
+      "major": 1,
+      "minor": 2,
+      "micro": 7,
+      "qualifier": "SNAPSHOT"
+    },
+    "jarFileFingerprint": "19650a9660f2c9dca8b92df34186269d2474cacb",
+    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\runtime\\context.impl-1.2.7-SNAPSHOT.jar",
     "javaRuntime": false
   },
   {
@@ -387,42 +425,66 @@
     "javaRuntime": true
   },
   {
-    "symbolicName": "context.impl",
+    "symbolicName": "osgi.enterprise",
     "version": {
-      "major": 1,
-      "minor": 2,
-      "micro": 7,
-      "qualifier": "SNAPSHOT"
+      "major": 5,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": "201203141834"
     },
-    "jarFileFingerprint": "19650a9660f2c9dca8b92df34186269d2474cacb",
+    "jarFileFingerprint": "4f6e081c38b951204e2b6a60d33ab0a90bfa1ad3",
     "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
-    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT\\icasa.teaching.distribution.with.apps\\runtime\\context.impl-1.2.7-SNAPSHOT.jar",
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\bin\\org.osgi.enterprise-5.0.0.jar",
     "javaRuntime": false
   },
   {
-    "symbolicName": "simulator.api",
+    "symbolicName": "followme.administration",
     "version": {
       "major": 1,
-      "minor": 2,
-      "micro": 7,
-      "qualifier": "SNAPSHOT"
+      "minor": 0,
+      "micro": 0,
+      "qualifier": "qualifier"
     },
-    "jarFileFingerprint": "9e654ce48e1923b9d500c92fc722af4fa85644dd",
-    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
-    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT\\icasa.teaching.distribution.with.apps\\runtime\\simulator.api-1.2.7-SNAPSHOT.jar",
+    "jarFileModificationDate": "2024-03-23T12:57:52.028+01:00",
+    "location": "C:\\Users\\abdel\\icaasaa\\followme.administration\\src",
     "javaRuntime": false
   },
   {
-    "symbolicName": "frontend.services",
+    "symbolicName": "gas.alaram",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": "qualifier"
+    },
+    "jarFileModificationDate": "2024-03-30T12:39:26.818+01:00",
+    "location": "C:\\Users\\abdel\\icaasaa\\gas.alaram\\src",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "device.push.button",
     "version": {
       "major": 1,
       "minor": 2,
       "micro": 7,
       "qualifier": "SNAPSHOT"
     },
-    "jarFileFingerprint": "f199036f1839eb8a4b0415389878ce17492228cf",
+    "jarFileFingerprint": "c3d9cee20a8e267d4ce166b93519ee27a0fbe6c2",
     "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
-    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT\\icasa.teaching.distribution.with.apps\\runtime\\frontend.services-1.2.7-SNAPSHOT.jar",
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\runtime\\device.push.button-1.2.7-SNAPSHOT.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "device.manager.api",
+    "version": {
+      "major": 1,
+      "minor": 2,
+      "micro": 7,
+      "qualifier": "SNAPSHOT"
+    },
+    "jarFileFingerprint": "afb7244e799da7a99ff444c67bc558c0eae29dee",
+    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\runtime\\device.manager.api-1.2.7-SNAPSHOT.jar",
     "javaRuntime": false
   },
   {
@@ -439,42 +501,29 @@
     "javaRuntime": true
   },
   {
-    "symbolicName": "access.manager.api",
+    "symbolicName": "context.remote",
     "version": {
       "major": 1,
       "minor": 2,
       "micro": 7,
       "qualifier": "SNAPSHOT"
     },
-    "jarFileFingerprint": "04a4855becc47356e4fe0dcc86687bcc92bb9cc8",
+    "jarFileFingerprint": "6a2b35332e1555b511c54be6ad56d2e2f54a2ceb",
     "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
-    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT\\icasa.teaching.distribution.with.apps\\runtime\\access.manager.api-1.2.7-SNAPSHOT.jar",
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\runtime\\context.remote-1.2.7-SNAPSHOT.jar",
     "javaRuntime": false
   },
   {
-    "symbolicName": "command.handler",
+    "symbolicName": "device.dependency.handler",
     "version": {
       "major": 1,
       "minor": 2,
       "micro": 7,
       "qualifier": "SNAPSHOT"
     },
-    "jarFileFingerprint": "5b4f5cccbcdfd82b051e8818bda4a6e7b1c73262",
+    "jarFileFingerprint": "e0a2b59d2e04842a72fbadd4a525a554f08e23bb",
     "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
-    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT\\icasa.teaching.distribution.with.apps\\runtime\\command.handler-1.2.7-SNAPSHOT.jar",
-    "javaRuntime": false
-  },
-  {
-    "symbolicName": "device.manager.api",
-    "version": {
-      "major": 1,
-      "minor": 2,
-      "micro": 7,
-      "qualifier": "SNAPSHOT"
-    },
-    "jarFileFingerprint": "afb7244e799da7a99ff444c67bc558c0eae29dee",
-    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
-    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT\\icasa.teaching.distribution.with.apps\\runtime\\device.manager.api-1.2.7-SNAPSHOT.jar",
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\runtime\\device.dependency.handler-1.2.7-SNAPSHOT.jar",
     "javaRuntime": false
   },
   {
@@ -511,47 +560,34 @@
       "micro": 0,
       "qualifier": "qualifier"
     },
-    "jarFileModificationDate": "2024-03-23T11:11:09.729+01:00",
+    "jarFileModificationDate": "2024-03-23T18:10:45.049+01:00",
     "location": "C:\\Users\\abdel\\icaasaa\\followme.manager\\src",
     "javaRuntime": false
   },
   {
-    "symbolicName": "org.apache.felix.ipojo",
-    "version": {
-      "major": 1,
-      "minor": 12,
-      "micro": 1,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "63d0902d40e5607e5b322fc9da8867b145bcdad3",
-    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
-    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT\\icasa.teaching.distribution.with.apps\\core\\org.apache.felix.ipojo-1.12.1.jar",
-    "javaRuntime": false
-  },
-  {
-    "symbolicName": "context.api",
+    "symbolicName": "application.remote",
     "version": {
       "major": 1,
       "minor": 2,
       "micro": 7,
       "qualifier": "SNAPSHOT"
     },
-    "jarFileFingerprint": "ed5205c7b7e633c5d23343522b4acf3e1de63576",
+    "jarFileFingerprint": "aaf25292edb587e369869579ec1895d8617c6626",
     "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
-    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT\\icasa.teaching.distribution.with.apps\\runtime\\context.api-1.2.7-SNAPSHOT.jar",
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\runtime\\application.remote-1.2.7-SNAPSHOT.jar",
     "javaRuntime": false
   },
   {
-    "symbolicName": "org.ow2.chameleon.json.json.org-implementation",
+    "symbolicName": "gogo.adapter",
     "version": {
-      "major": 0,
-      "minor": 4,
-      "micro": 0,
-      "qualifier": ""
+      "major": 1,
+      "minor": 2,
+      "micro": 7,
+      "qualifier": "SNAPSHOT"
     },
-    "jarFileFingerprint": "ae538443a93e97bac09364b5d796f8d55a53e78d",
+    "jarFileFingerprint": "a008c936613315a5943541d18fcf7fc87a526f67",
     "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
-    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT\\icasa.teaching.distribution.with.apps\\runtime\\json-service-json.org-0.4.0.jar",
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\runtime\\gogo.adapter-1.2.7-SNAPSHOT.jar",
     "javaRuntime": false
   },
   {
@@ -579,6 +615,19 @@
     "javaRuntime": false
   },
   {
+    "symbolicName": "common",
+    "version": {
+      "major": 1,
+      "minor": 2,
+      "micro": 7,
+      "qualifier": "SNAPSHOT"
+    },
+    "jarFileFingerprint": "f240d89b19b4cdc06a9162a230f54e52fdf3a845",
+    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\runtime\\common-1.2.7-SNAPSHOT.jar",
+    "javaRuntime": false
+  },
+  {
     "symbolicName": "followme",
     "version": {
       "major": 1,
@@ -586,7 +635,7 @@
       "micro": 0,
       "qualifier": "qualifier"
     },
-    "jarFileModificationDate": "2024-03-22T21:47:08.560+01:00",
+    "jarFileModificationDate": "2024-03-24T14:19:23.745+01:00",
     "location": "C:\\Users\\abdel\\icaasaa\\followme\\src",
     "javaRuntime": false
   },
@@ -603,29 +652,29 @@
     "javaRuntime": false
   },
   {
-    "symbolicName": "osgi.enterprise",
-    "version": {
-      "major": 5,
-      "minor": 0,
-      "micro": 0,
-      "qualifier": "201203141834"
-    },
-    "jarFileFingerprint": "4f6e081c38b951204e2b6a60d33ab0a90bfa1ad3",
-    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
-    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT\\icasa.teaching.distribution.with.apps\\bin\\org.osgi.enterprise-5.0.0.jar",
-    "javaRuntime": false
-  },
-  {
-    "symbolicName": "device.dependency.handler",
+    "symbolicName": "command.handler",
     "version": {
       "major": 1,
       "minor": 2,
       "micro": 7,
       "qualifier": "SNAPSHOT"
     },
-    "jarFileFingerprint": "e0a2b59d2e04842a72fbadd4a525a554f08e23bb",
+    "jarFileFingerprint": "5b4f5cccbcdfd82b051e8818bda4a6e7b1c73262",
     "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
-    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT\\icasa.teaching.distribution.with.apps\\runtime\\device.dependency.handler-1.2.7-SNAPSHOT.jar",
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\runtime\\command.handler-1.2.7-SNAPSHOT.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "frontend.services",
+    "version": {
+      "major": 1,
+      "minor": 2,
+      "micro": 7,
+      "qualifier": "SNAPSHOT"
+    },
+    "jarFileFingerprint": "f199036f1839eb8a4b0415389878ce17492228cf",
+    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\runtime\\frontend.services-1.2.7-SNAPSHOT.jar",
     "javaRuntime": false
   }
 ]

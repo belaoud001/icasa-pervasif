@@ -1,5 +1,0 @@
-package administrations;
-
-public interface FollowMeAdministration {
-
-}

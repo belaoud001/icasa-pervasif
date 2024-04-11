@@ -9,8 +9,23 @@
 <fullyQualifiedTypeName name="org.apache.felix.ipojo.annotations.Component"/>
 <fullyQualifiedTypeName name="org.apache.felix.ipojo.annotations.Instantiate"/>
 <fullyQualifiedTypeName name="fr.liglab.adele.icasa.command.handler.CommandProvider"/>
-<fullyQualifiedTypeName name="org.apache.felix.ipojo.annotations.Requires"/>
 <fullyQualifiedTypeName name="administrations.FollowMeAdministration"/>
 <fullyQualifiedTypeName name="fr.liglab.adele.icasa.command.handler.Command"/>
 <fullyQualifiedTypeName name="enums.IlluminanceGoal"/>
+<fullyQualifiedTypeName name="com.google.common.collect.Multiset"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="mail.services.MailSender"/>
+<fullyQualifiedTypeName name="javax.mail.internet.MimeMessage"/>
+<fullyQualifiedTypeName name="javax.mail.internet.InternetAddress"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="javax.mail.Message"/>
+<fullyQualifiedTypeName name="javax.mail.Session"/>
+<fullyQualifiedTypeName name="javax.mail.Transport"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="javax.mail.Authenticator"/>
+<fullyQualifiedTypeName name="javax.mail.PasswordAuthentication"/>
+<fullyQualifiedTypeName name="fr.liglab.adele.icasa.clockservice.Clock"/>
+<fullyQualifiedTypeName name="org.apache.felix.ipojo.annotations.Requires"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>

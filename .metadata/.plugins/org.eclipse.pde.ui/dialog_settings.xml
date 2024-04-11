@@ -5,6 +5,13 @@
 	<item value="false" key="apiAnalysis"/>
 	<item value="false" key="rcpPlugin"/>
 	<item value="true" key="osgiProject"/>
+	<section name="pde_compiler_errorwarnings_block">
+		<item value="true" key="0"/>
+		<item value="false" key="1"/>
+		<item value="false" key="2"/>
+		<item value="false" key="3"/>
+		<item value="false" key="4"/>
+	</section>
 	<section name="org.eclipse.pde.ui.dialogs.PluginSelectionDialog">
 		<item value="true" key="ShowStatusLine"/>
 		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History/&gt;" key="History"/>
@@ -17,5 +24,10 @@
 		</section>
 	</section>
 	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="editBundleContainerWizard">
+		<item value="C:\Users\abdel\Downloads\icasa.teaching.distribution.with.apps\runtime" key="location1"/>
+		<item value="C:\Users\abdel\Downloads\icasa.teaching.distribution.with.apps\core" key="location2"/>
+		<item value="C:\Users\abdel\Downloads\icasa.teaching.distribution.with.apps-1.2.7-SNAPSHOT\icasa.teaching.distribution.with.apps\runtime" key="location3"/>
 	</section>
 </section>

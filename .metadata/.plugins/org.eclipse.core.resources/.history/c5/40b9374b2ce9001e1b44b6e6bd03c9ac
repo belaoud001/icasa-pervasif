@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ipojo xmlns="org.apache.felix.ipojo">
-  <component classname="managers.FollowMeManagerImpl" name="FollowMeManager">
-    <callback method="start" transition="validate"/>
-    <callback method="stop" transition="invalidate"/>
-    <requires specification="configurations.FollowMeConfiguration" field="followMeConfiguration"/>
-  </component>
-</ipojo>

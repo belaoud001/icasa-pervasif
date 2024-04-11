@@ -12,6 +12,7 @@
       <sourceFolder url="file://$MODULE_DIR$/hello.english.provider/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/hello.french.provider/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/hello.service/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/gas.alaram/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/mail.service/src" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />

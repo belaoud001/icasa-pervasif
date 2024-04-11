@@ -1,0 +1,8 @@
+package lights;
+
+public class BinaryLightImpl {
+
+	/** Field for PresenceSensors dependency */
+	private PresenceSensor[] PresenceSensors;
+
+}

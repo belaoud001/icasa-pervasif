@@ -1,2 +1,2 @@
 eclipse.preferences.version=1
-task-tag-projects-already-scanned=followme,followme.configuration,followme.manager,hello.client,hello.english.provider,hello.french.provider,hello.service,followme.administration,followme.command
+task-tag-projects-already-scanned=followme,followme.configuration,followme.manager,hello.client,hello.english.provider,hello.french.provider,hello.service,followme.administration,followme.command,gas.alaram,mail.service

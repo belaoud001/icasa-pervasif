@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ipojo xmlns="org.apache.felix.ipojo">
-  <component name="EnglishGreetingProvider">
-    <callback method="start" transition="validate"/>
-    <callback method="stop" transition="invalidate"/>
-    <provides specifications="service.Hello"/>
-  </component>
-</ipojo>
