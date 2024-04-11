@@ -16,6 +16,7 @@
       <callback method="bindDimmerLights" type="bind"/>
       <callback method="unbindDimmerLights" type="unbind"/>
     </requires>
+    <requires specification="alarm.service.AlarmService" field="alarmService"/>
   </component>
   <instance component="BinaryLight" name="BinaryLight-1"/>
 </ipojo>

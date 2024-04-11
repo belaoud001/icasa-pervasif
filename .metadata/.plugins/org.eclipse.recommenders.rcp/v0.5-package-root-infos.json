@@ -259,6 +259,19 @@
     "javaRuntime": false
   },
   {
+    "symbolicName": "org.apache.felix.framework",
+    "version": {
+      "major": 4,
+      "minor": 6,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "f92e4425d7c8d32545d2babe34754275625b4a6b",
+    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\bin\\org.apache.felix.framework-4.6.1.jar",
+    "javaRuntime": false
+  },
+  {
     "symbolicName": "jre",
     "version": {
       "major": 1,
@@ -488,6 +501,18 @@
     "javaRuntime": false
   },
   {
+    "symbolicName": "alarm.service",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": "qualifier"
+    },
+    "jarFileModificationDate": "2024-04-11T22:52:57.690+02:00",
+    "location": "C:\\Users\\abdel\\icaasaa\\alarm.service\\src",
+    "javaRuntime": false
+  },
+  {
     "symbolicName": "jre",
     "version": {
       "major": 1,
@@ -524,6 +549,19 @@
     "jarFileFingerprint": "e0a2b59d2e04842a72fbadd4a525a554f08e23bb",
     "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
     "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\runtime\\device.dependency.handler-1.2.7-SNAPSHOT.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "slf4j.api",
+    "version": {
+      "major": 1,
+      "minor": 7,
+      "micro": 12,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "8e20852d05222dc286bf1c71d78d0531e177c317",
+    "jarFileModificationDate": "2015-12-04T05:11:28+01:00",
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\bin\\slf4j-api-1.7.12.jar",
     "javaRuntime": false
   },
   {

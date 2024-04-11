@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ipojo xmlns="org.apache.felix.ipojo">
-  <component name="New Component">
-    <provides specifications="gas.alarm.GasAlarmService"/>
-    <provides specifications="fr.liglab.adele.icasa.service.scheduler.PeriodicRunnable"/>
-  </component>
-</ipojo>

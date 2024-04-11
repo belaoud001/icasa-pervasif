@@ -23,5 +23,15 @@
     "location": "C:\\Users\\abdel\\icaasaa\\mail.service\\src",
     "status": "UNRESOLVED",
     "error": "No call model found for \u0027C:\\Users\\abdel\\icaasaa\\mail.service\\src\u0027. Neither fingerprint \u0027null\u0027 nor symbolic name \u0027mail.service\u0027 are known."
+  },
+  "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\runtime\\context.api-1.2.7-SNAPSHOT.jar": {
+    "location": "C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\runtime\\context.api-1.2.7-SNAPSHOT.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027C:\\Users\\abdel\\Downloads\\icasa.teaching.distribution.with.apps\\runtime\\context.api-1.2.7-SNAPSHOT.jar\u0027. Neither fingerprint \u0027ed5205c7b7e633c5d23343522b4acf3e1de63576\u0027 nor symbolic name \u0027context.api\u0027 are known."
+  },
+  "C:\\Users\\abdel\\icaasaa\\alarm.service\\src": {
+    "location": "C:\\Users\\abdel\\icaasaa\\alarm.service\\src",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027C:\\Users\\abdel\\icaasaa\\alarm.service\\src\u0027. Neither fingerprint \u0027null\u0027 nor symbolic name \u0027alarm.service\u0027 are known."
   }
 }

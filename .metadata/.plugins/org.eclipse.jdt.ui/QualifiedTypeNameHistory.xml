@@ -28,4 +28,5 @@
 <fullyQualifiedTypeName name="fr.liglab.adele.icasa.clockservice.Clock"/>
 <fullyQualifiedTypeName name="org.apache.felix.ipojo.annotations.Requires"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="alarm.service.AlarmService"/>
 </qualifiedTypeNameHistroy>
