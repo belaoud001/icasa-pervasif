@@ -15,7 +15,9 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+import alarm.service.AlarmService;
 
+@Component
 public class GasAlarmSystemApplication implements DeviceListener,
 		PeriodicRunnable, GasAlarmService {
 
@@ -27,6 +29,8 @@ public class GasAlarmSystemApplication implements DeviceListener,
 
 	private boolean alarmRunning = false;
 
+	private boolean mailSent = false;
+
 	private Set<GasAlarmListener> setOfListener = new HashSet<GasAlarmListener>();
 
 	private BinaryLight[] binaryLights;
@@ -34,6 +38,12 @@ public class GasAlarmSystemApplication implements DeviceListener,
 	private DimmerLight[] dimmerLights;
 
 	private CarbonDioxydeSensor[] carbonDioxydeSensors;
+
+	/** Field for alarmService dependency */
+	private AlarmService alarmService;
+
+	/** Field for mailSender dependency */
+	private MailSender mailSender;
 
 	public GasAlarmSystemApplication() {
 		m_lock = new Object();
@@ -52,13 +62,27 @@ public class GasAlarmSystemApplication implements DeviceListener,
 		System.out.println(" Gas alarm component start ... ");
 	}
 
-	public void bindCarbonDioxydeSensor(
-			CarbonDioxydeSensor carbonDioxydeSensor, Map properties) {
+	public void bindCarbonDioxydeSensor(CarbonDioxydeSensor carbonDioxydeSensor, Map properties) {
 		carbonDioxydeSensor.addListener(this);
 	}
 
-	public void unbindCarbonDioxydeSensor(
-			CarbonDioxydeSensor carbonDioxydeSensor, Map properties) {
+	public void unbindCarbonDioxydeSensor(CarbonDioxydeSensor carbonDioxydeSensor, Map properties) {
+		String message;
+
+		if (carbonDioxydeSensors.length > 0) {
+			message = "Fortunately, there is another device that is currently in service and working properly.";
+		} else {
+			message = "Unfortunately, there are no other alternatives available. We recommend immediate intervention to resolve the problem.";
+		}
+
+		mailSender.sendEmail(
+				"abdelhalimbelaoud@gmail.com",
+				"[iCasa][Important] CO2 Sensor Out of Service",
+				"Hello, Mr. Belaoud,\n\n" +
+						"The CO2 sensor with the following serial number '" + carbonDioxydeSensor.getSerialNumber() + "' has been detected as out of service in " +
+						carbonDioxydeSensor.getPropertyValue("Location") + ".\n\n " + message
+		);
+
 		carbonDioxydeSensor.removeListener(this);
 	}
 
@@ -108,7 +132,6 @@ public class GasAlarmSystemApplication implements DeviceListener,
 	}
 
 	public void run() {
-		System.out.println("Hello");
 		if (checkCo2()) {
 			if (!state) {
 				for (BinaryLight light : binaryLights) {
@@ -131,7 +154,15 @@ public class GasAlarmSystemApplication implements DeviceListener,
 				for (GasAlarmListener listener : setOfListener) {
 					listener.thresholdCrossUp();
 				}
+				
+				alarmService.fireAlarm();
+				
 				alarmRunning = true;
+			}
+			if (!mailSent) {
+				mailSender.sendEmail("abdelhalimbelaoud@gmail.com", "[iCasa][Important] High levels of C02 has been detected in the office", 
+						"Hello sir Belaoud, high CO2 percentage has been detected !");
+				mailSent = true;
 			}
 		} else {
 			if (alarmRunning == true) {
@@ -139,9 +170,18 @@ public class GasAlarmSystemApplication implements DeviceListener,
 				for (GasAlarmListener listener : setOfListener) {
 					listener.thresholdCrossUp();
 				}
-				;
+				
+				alarmService.stopAlarm();
+				
 				alarmRunning = false;
 			}
+			
+			if (mailSent) {
+				mailSender.sendEmail("abdelhalimbelaoud@gmail.com", "[iCasa][Important] Update CO2 levels back to normal", 
+						"Hello sir Belaoud, CO2 has been stabalized check the app to know details !");
+			}
+			
+			mailSent = false;
 		}
 	}
 

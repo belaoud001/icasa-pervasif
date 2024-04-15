@@ -13,6 +13,12 @@
     </requires>
     <callback method="start" transition="validate"/>
     <callback method="stop" transition="invalidate"/>
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.gasSensor.CarbonDioxydeSensor" field="carbonDioxydeSensors">
+      <callback method="bindCarbonDioxydeSensor" type="bind"/>
+      <callback method="unbindCarbonDioxydeSensor" type="unbind"/>
+    </requires>
+    <requires specification="alarm.service.AlarmService" field="alarmService"/>
+    <requires specification="mail.services.MailSender" field="mailSender"/>
   </component>
   <instance component="GasAlarmSystemApplication" name="GasAlarmSystemApplication-1"/>
 </ipojo>

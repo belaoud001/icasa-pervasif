@@ -14,6 +14,11 @@
       <sourceFolder url="file://$MODULE_DIR$/hello.service/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/gas.alaram/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/mail.service/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TemperatureCommand/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/alarm.service/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/temperature.administration/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/temperature.manager/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/temperature.provider/src" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />

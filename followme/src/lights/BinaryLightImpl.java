@@ -31,7 +31,7 @@ public class BinaryLightImpl implements DeviceListener, FollowMeConfiguration {
 
 	public void start() {
 		System.out.println("Binary light component is starting ...");
-
+		
 		alarmService.fireAlarm();
 
 		for (PresenceSensor sensor : presenceSensors)
@@ -44,13 +44,11 @@ public class BinaryLightImpl implements DeviceListener, FollowMeConfiguration {
 	}
 
 	public void unbindBinaryLight(BinaryLight binaryLight, Map properties) {
-		System.out.println("Unbind binary light "
-				+ binaryLight.getSerialNumber());
+		System.out.println("Unbind binary light " + binaryLight.getSerialNumber());
 
 		if (binaryLight.getPowerStatus()) {
 			turnOnLightsAtLocation(maximumLightsToTurnOnPerRoom,
-					(String) binaryLight
-							.getPropertyValue(Constants.LOCATION_PROPERTY_NAME));
+					(String) binaryLight.getPropertyValue(Constants.LOCATION_PROPERTY_NAME));
 		}
 	}
 
@@ -60,20 +58,16 @@ public class BinaryLightImpl implements DeviceListener, FollowMeConfiguration {
 	}
 
 	public void unbindDimmerLights(DimmerLight dimmerLight, Map properties) {
-		System.out.println("Unbind dimmer light "
-				+ dimmerLight.getSerialNumber());
+		System.out.println("Unbind dimmer light " + dimmerLight.getSerialNumber());
 	}
 
 	public void bindPresenceSensor(PresenceSensor presenceSensor, Map properties) {
-		System.out.println("Bind presence sensor "
-				+ presenceSensor.getSerialNumber());
+		System.out.println("Bind presence sensor " + presenceSensor.getSerialNumber());
 		presenceSensor.addListener(this);
 	}
 
-	public void unbindPresenceSensor(PresenceSensor presenceSensor,
-			Map properties) {
-		System.out.println("Unbind presence sensor "
-				+ presenceSensor.getSerialNumber());
+	public void unbindPresenceSensor(PresenceSensor presenceSensor, Map properties) {
+		System.out.println("Unbind presence sensor " + presenceSensor.getSerialNumber());
 		presenceSensor.removeListener(this);
 	}
 
@@ -89,25 +83,21 @@ public class BinaryLightImpl implements DeviceListener, FollowMeConfiguration {
 		System.err.println("This method is not implemented yet ...");
 	}
 
-	private synchronized List<BinaryLight> getAllBinaryLightsAtLocation(
-			String location) {
+	private synchronized List<BinaryLight> getAllBinaryLightsAtLocation(String location) {
 		List<BinaryLight> binaryLightsLocation = new ArrayList<BinaryLight>();
 
 		for (BinaryLight binaryLight : binaryLights)
-			if (binaryLight.getPropertyValue(Constants.LOCATION_PROPERTY_NAME)
-					.equals(location))
+			if (binaryLight.getPropertyValue(Constants.LOCATION_PROPERTY_NAME).equals(location))
 				binaryLightsLocation.add(binaryLight);
 
 		return binaryLightsLocation;
 	}
 
-	private synchronized List<DimmerLight> getAllDimmerLightsAtLocation(
-			String location) {
+	private synchronized List<DimmerLight> getAllDimmerLightsAtLocation(String location) {
 		List<DimmerLight> dimmerLightsAtLocation = new ArrayList<DimmerLight>();
 
 		for (DimmerLight dimmerLight : dimmerLights)
-			if (dimmerLight.getPropertyValue(Constants.LOCATION_PROPERTY_NAME)
-					.equals(location))
+			if (dimmerLight.getPropertyValue(Constants.LOCATION_PROPERTY_NAME).equals(location))
 				dimmerLightsAtLocation.add(dimmerLight);
 
 		return dimmerLightsAtLocation;
@@ -121,24 +111,24 @@ public class BinaryLightImpl implements DeviceListener, FollowMeConfiguration {
 		return getAllDimmerLightsAtLocation(location).size();
 	}
 
-	public void devicePropertyModified(GenericDevice device,
-			String propertyName, Object oldValue, Object newValue) {
+	public void devicePropertyModified(GenericDevice device, String propertyName, Object oldValue, Object newValue) {
+		System.err.println("presence modified " + maximumLightsToTurnOnPerRoom);
+
 		if (device instanceof PresenceSensor
-				&& propertyName
-						.equals(PresenceSensor.PRESENCE_SENSOR_SENSED_PRESENCE)) {
+				&& propertyName.equals(PresenceSensor.PRESENCE_SENSOR_SENSED_PRESENCE)) {
+
+			System.err.println("presence modified entering " + maximumLightsToTurnOnPerRoom);
+
 			PresenceSensor presenceSensor = (PresenceSensor) device;
-			String location = (String) presenceSensor
-					.getPropertyValue(Constants.LOCATION_PROPERTY_NAME);
+			String location = (String) presenceSensor.getPropertyValue(Constants.LOCATION_PROPERTY_NAME);
+			
 
 			if (!Constants.LOCATION_UNKNOWN.equals(location)) {
 				if (presenceSensor.getSensedPresence()) {
-					turnOnLightsAtLocation(maximumLightsToTurnOnPerRoom,
-							location);
-					System.out.println("hello");
-					alarmService.fireAlarm();
+					turnOnLightsAtLocation(maximumLightsToTurnOnPerRoom, location);
+					System.err.println("Maximum allowed is lights are turned on : " + maximumLightsToTurnOnPerRoom);
 				} else
-					turnOffLightsAtLocation(maximumLightsToTurnOnPerRoom,
-							location);
+					turnOffLightsAtLocation(maximumLightsToTurnOnPerRoom, location);
 			}
 		}
 	}
@@ -155,8 +145,7 @@ public class BinaryLightImpl implements DeviceListener, FollowMeConfiguration {
 		return maximumLightsToTurnOnPerRoom;
 	}
 
-	public void setMaximumNumberOfLightsToTurnOn(
-			int maximumNumberOfLightsToTurnOn) {
+	public void setMaximumNumberOfLightsToTurnOn(int maximumNumberOfLightsToTurnOn) {
 		maximumLightsToTurnOnPerRoom = maximumNumberOfLightsToTurnOn;
 	}
 
@@ -201,46 +190,41 @@ public class BinaryLightImpl implements DeviceListener, FollowMeConfiguration {
 	}
 
 	private int getNumberOfTurnedOnLightsAtLocation(String location) {
-		return getNumberOfTurnedOnBinaryLightsAtLocation(location)
-				+ getNumberOfTurnedOnDimmerLightsAtLocation(location);
+		return getNumberOfTurnedOnBinaryLightsAtLocation(location) + getNumberOfTurnedOnDimmerLightsAtLocation(location);
 	}
 
 	private int getNumberOfLightsAtLocation(String location) {
-		return getNumberOfBinaryLightsAtLocation(location)
-				+ getNumberOfDimmerLightsAtLocation(location);
+		return getNumberOfBinaryLightsAtLocation(location) + getNumberOfDimmerLightsAtLocation(location);
 	}
 
 	private void turnOnLightsAtLocation(int numberOfLights, String location) {
 		int numberOfBinaryLightsAtLocation = getNumberOfBinaryLightsAtLocation(location);
-		int numberOfBinaryLights = Math.min(numberOfBinaryLightsAtLocation,
-				numberOfLights);
+		int numberOfBinaryLights = Math.min(numberOfBinaryLightsAtLocation, numberOfLights);
+
+		System.out.println("ghadi nche3lo : " + numberOfBinaryLights);
 
 		setupBinaryLightsAtLocation(numberOfBinaryLights, location, true);
 
 		if (numberOfBinaryLightsAtLocation < numberOfLights) {
-			int numberOfDimmerLights = numberOfLights
-					- numberOfBinaryLightsAtLocation;
+			int numberOfDimmerLights = numberOfLights - numberOfBinaryLightsAtLocation;
 			setupDimmerLightsAtLocation(numberOfDimmerLights, location, true);
 		}
 	}
 
 	private void turnOffLightsAtLocation(int numberOfLights, String location) {
 		int numberOfDimmerLightsAtLocation = getNumberOfTurnedOnDimmerLightsAtLocation(location);
-		int numberOfDimmerLights = Math.min(numberOfDimmerLightsAtLocation,
-				numberOfLights);
+		int numberOfDimmerLights = Math.min(numberOfDimmerLightsAtLocation, numberOfLights);
 
 		setupDimmerLightsAtLocation(numberOfDimmerLights, location, false);
 
 		if (numberOfDimmerLightsAtLocation < numberOfLights) {
-			int numberOfBinaryLights = numberOfLights
-					- numberOfDimmerLightsAtLocation;
+			int numberOfBinaryLights = numberOfLights - numberOfDimmerLightsAtLocation;
 
 			setupBinaryLightsAtLocation(numberOfBinaryLights, location, false);
 		}
 	}
 
-	private void setupBinaryLightsAtLocation(int numberOfBinaryLights,
-			String location, boolean turnOn) {
+	private void setupBinaryLightsAtLocation(int numberOfBinaryLights, String location, boolean turnOn) {
 		List<BinaryLight> binaryLights = getAllBinaryLightsAtLocation(location);
 
 		for (BinaryLight binaryLight : binaryLights) {
@@ -254,8 +238,7 @@ public class BinaryLightImpl implements DeviceListener, FollowMeConfiguration {
 		}
 	}
 
-	private void setupDimmerLightsAtLocation(int numberOfDimmerLights,
-			String location, boolean turnOn) {
+	private void setupDimmerLightsAtLocation(int numberOfDimmerLights, String location, boolean turnOn) {
 		List<DimmerLight> dimmerLights = getAllDimmerLightsAtLocation(location);
 
 		for (DimmerLight dimmerLight : dimmerLights) {
@@ -299,8 +282,7 @@ public class BinaryLightImpl implements DeviceListener, FollowMeConfiguration {
 		maximumEnergyConsumptionAllowedInARoom = maximumEnergy;
 		maximumLightsToTurnOnPerRoom = computeLightsConsideringEnergyLimits();
 
-		System.out
-				.println("Maximum allowed energy per room has been updated successfully to : "
+		System.out.println("Maximum allowed energy per room has been updated successfully to : "
 						+ maximumEnergyConsumptionAllowedInARoom + " Watt.");
 		System.out.println("Using the given energy we can use a maximum of "
 				+ maximumLightsToTurnOnPerRoom + " per room.");

@@ -5,43 +5,43 @@ Bundle-SymbolicName: gas.alaram
 Bundle-Version: 1.0.0.qualifier
 Created-By: iPOJO 1.12.1
 Export-Package: gas.alarm
-Import-Package: fr.liglab.adele.icasa, fr.liglab.adele.icasa.access, f
- r.liglab.adele.icasa.access.command, fr.liglab.adele.icasa.applicatio
- n, fr.liglab.adele.icasa.application.impl, fr.liglab.adele.icasa.appl
- ication.impl.command, fr.liglab.adele.icasa.application.remote, fr.li
- glab.adele.icasa.application.remote.util, fr.liglab.adele.icasa.clock
- service, fr.liglab.adele.icasa.clockservice.impl, fr.liglab.adele.ica
- sa.clockservice.util, fr.liglab.adele.icasa.command, fr.liglab.adele.
- icasa.command.handler, fr.liglab.adele.icasa.commands, fr.liglab.adel
- e.icasa.commands.impl, fr.liglab.adele.icasa.common, fr.liglab.adele.
- icasa.common.impl, fr.liglab.adele.icasa.common.xml.utils, fr.liglab.
- adele.icasa.dependency.manager.exception, fr.liglab.adele.icasa.devic
- e, fr.liglab.adele.icasa.device.bathroomscale, fr.liglab.adele.icasa.
- device.box, fr.liglab.adele.icasa.device.button, fr.liglab.adele.icas
- a.device.button.simulated, fr.liglab.adele.icasa.device.doorWindow, f
- r.liglab.adele.icasa.device.gasSensor, fr.liglab.adele.icasa.device.l
- ight, fr.liglab.adele.icasa.device.manager, fr.liglab.adele.icasa.dev
- ice.motion, fr.liglab.adele.icasa.device.power, fr.liglab.adele.icasa
- .device.presence, fr.liglab.adele.icasa.device.security, fr.liglab.ad
- ele.icasa.device.settopbox, fr.liglab.adele.icasa.device.sound, fr.li
- glab.adele.icasa.device.sprinkler, fr.liglab.adele.icasa.device.tempe
- rature, fr.liglab.adele.icasa.device.util, fr.liglab.adele.icasa.exce
- ption, fr.liglab.adele.icasa.frontend.services, fr.liglab.adele.icasa
- .frontend.services.rest, fr.liglab.adele.icasa.frontend.services.util
- s, fr.liglab.adele.icasa.listener, fr.liglab.adele.icasa.location, fr
- .liglab.adele.icasa.location.impl, fr.liglab.adele.icasa.location.uti
- l, fr.liglab.adele.icasa.remote.wisdom, fr.liglab.adele.icasa.remote.
- wisdom.util, fr.liglab.adele.icasa.service.location, fr.liglab.adele.
- icasa.service.preferences, fr.liglab.adele.icasa.service.scheduler, f
- r.liglab.adele.icasa.service.zone.dimension.calculator, fr.liglab.ade
- le.icasa.service.zone.size.calculator, fr.liglab.adele.icasa.simulato
- r, fr.liglab.adele.icasa.simulator.listener, fr.liglab.adele.icasa.si
- mulator.listener.util, fr.liglab.adele.icasa.simulator.remote.wisdom.
- util, fr.liglab.adele.icasa.simulator.script.executor, fr.liglab.adel
- e.icasa.simulator.services, mail.services, org.apache.felix.ipojo;ver
- sion="[1.12.1,2.0.0)", org.apache.felix.ipojo.architecture;version="[
- 1.12.1,2.0.0)", org.json, org.osgi.service.cm;version=1.2, org.osgi.s
- ervice.log;version=1.3
+Import-Package: alarm.service, fr.liglab.adele.icasa, fr.liglab.adele.
+ icasa.access, fr.liglab.adele.icasa.access.command, fr.liglab.adele.i
+ casa.application, fr.liglab.adele.icasa.application.impl, fr.liglab.a
+ dele.icasa.application.impl.command, fr.liglab.adele.icasa.applicatio
+ n.remote, fr.liglab.adele.icasa.application.remote.util, fr.liglab.ad
+ ele.icasa.clockservice, fr.liglab.adele.icasa.clockservice.impl, fr.l
+ iglab.adele.icasa.clockservice.util, fr.liglab.adele.icasa.command, f
+ r.liglab.adele.icasa.command.handler, fr.liglab.adele.icasa.commands,
+  fr.liglab.adele.icasa.commands.impl, fr.liglab.adele.icasa.common, f
+ r.liglab.adele.icasa.common.impl, fr.liglab.adele.icasa.common.xml.ut
+ ils, fr.liglab.adele.icasa.dependency.manager.exception, fr.liglab.ad
+ ele.icasa.device, fr.liglab.adele.icasa.device.bathroomscale, fr.ligl
+ ab.adele.icasa.device.box, fr.liglab.adele.icasa.device.button, fr.li
+ glab.adele.icasa.device.button.simulated, fr.liglab.adele.icasa.devic
+ e.doorWindow, fr.liglab.adele.icasa.device.gasSensor, fr.liglab.adele
+ .icasa.device.light, fr.liglab.adele.icasa.device.manager, fr.liglab.
+ adele.icasa.device.motion, fr.liglab.adele.icasa.device.power, fr.lig
+ lab.adele.icasa.device.presence, fr.liglab.adele.icasa.device.securit
+ y, fr.liglab.adele.icasa.device.settopbox, fr.liglab.adele.icasa.devi
+ ce.sound, fr.liglab.adele.icasa.device.sprinkler, fr.liglab.adele.ica
+ sa.device.temperature, fr.liglab.adele.icasa.device.util, fr.liglab.a
+ dele.icasa.exception, fr.liglab.adele.icasa.frontend.services, fr.lig
+ lab.adele.icasa.frontend.services.rest, fr.liglab.adele.icasa.fronten
+ d.services.utils, fr.liglab.adele.icasa.listener, fr.liglab.adele.ica
+ sa.location, fr.liglab.adele.icasa.location.impl, fr.liglab.adele.ica
+ sa.location.util, fr.liglab.adele.icasa.remote.wisdom, fr.liglab.adel
+ e.icasa.remote.wisdom.util, fr.liglab.adele.icasa.service.location, f
+ r.liglab.adele.icasa.service.preferences, fr.liglab.adele.icasa.servi
+ ce.scheduler, fr.liglab.adele.icasa.service.zone.dimension.calculator
+ , fr.liglab.adele.icasa.service.zone.size.calculator, fr.liglab.adele
+ .icasa.simulator, fr.liglab.adele.icasa.simulator.listener, fr.liglab
+ .adele.icasa.simulator.listener.util, fr.liglab.adele.icasa.simulator
+ .remote.wisdom.util, fr.liglab.adele.icasa.simulator.script.executor,
+  fr.liglab.adele.icasa.simulator.services, mail.services, org.apache.
+ felix.ipojo;version="[1.12.1,2.0.0)", org.apache.felix.ipojo.architec
+ ture;version="[1.12.1,2.0.0)", org.json, org.osgi.service.cm;version=
+ 1.2, org.osgi.service.log;version=1.3
 iPOJO-Components: instance { $component="GasAlarmSystemApplication" $n
  ame="GasAlarmSystemApplication-1" }component { $classname="gas.alarm.
  GasAlarmSystemApplication" $name="GasAlarmSystemApplication" provides
@@ -53,49 +53,105 @@ iPOJO-Components: instance { $component="GasAlarmSystemApplication" $n
  inaryLight" $type="unbind" }}requires { $aggregate="true" $optional="
  true" $specification="fr.liglab.adele.icasa.device.light.DimmerLight"
   $field="dimmerLights" callback { $method="bindDimmerLight" $type="bi
- nd" }callback { $method="unbindDimmerLight" $type="unbind" }}callback
-  { $method="start" $transition="validate" }callback { $method="stop" 
- $transition="invalidate" }manipulation { $classname="gas.alarm.GasAla
- rmSystemApplication" interface { $name="fr.liglab.adele.icasa.device.
- DeviceListener" }interface { $name="fr.liglab.adele.icasa.service.sch
- eduler.PeriodicRunnable" }interface { $name="gas.alarm.GasAlarmServic
- e" }field { $name="_CO2Threshold" $type="double" }field { $name="alar
- mRunning" $type="boolean" }field { $name="binaryLights" $type="fr.lig
- lab.adele.icasa.device.light.BinaryLight[]" }field { $name="carbonDio
- xydeSensors" $type="fr.liglab.adele.icasa.device.gasSensor.CarbonDiox
- ydeSensor[]" }field { $name="dimmerLights" $type="fr.liglab.adele.ica
- sa.device.light.DimmerLight[]" }field { $name="m_lock" $type="java.la
- ng.Object" }field { $name="setOfListener" $type="java.util.Set" }fiel
- d { $name="state" $type="boolean" }method { $name="stop" }method { $n
- ame="start" }method { $name="bindCarbonDioxydeSensor" $arguments="{fr
- .liglab.adele.icasa.device.gasSensor.CarbonDioxydeSensor,java.util.Ma
- p}" $names="{carbonDioxydeSensor,properties}" }method { $name="unbind
- CarbonDioxydeSensor" $arguments="{fr.liglab.adele.icasa.device.gasSen
- sor.CarbonDioxydeSensor,java.util.Map}" $names="{carbonDioxydeSensor,
- properties}" }method { $name="deviceAdded" $arguments="{fr.liglab.ade
- le.icasa.device.GenericDevice}" $names="{arg0}" }method { $name="devi
- cePropertyAdded" $arguments="{fr.liglab.adele.icasa.device.GenericDev
- ice,java.lang.String}" $names="{arg0,arg1}" }method { $name="devicePr
- opertyModified" $arguments="{fr.liglab.adele.icasa.device.GenericDevi
- ce,java.lang.String,java.lang.Object,java.lang.Object}" $names="{devi
- ce,propertyName,oldValue,newValue}" }method { $name="checkCo2" $retur
- n="boolean" }method { $name="devicePropertyRemoved" $arguments="{fr.l
- iglab.adele.icasa.device.GenericDevice,java.lang.String}" $names="{ar
- g0,arg1}" }method { $name="deviceEvent" $arguments="{fr.liglab.adele.
- icasa.device.GenericDevice,java.lang.Object}" $names="{device,data}" 
- }method { $name="deviceRemoved" $arguments="{fr.liglab.adele.icasa.de
- vice.GenericDevice}" $names="{arg0}" }method { $name="getPeriod" $ret
- urn="long" }method { $name="getUnit" $return="java.util.concurrent.Ti
- meUnit" }method { $name="run" }method { $name="addListener" $argument
+ nd" }callback { $method="unbindDimmerLight" $type="unbind" }}requires
+  { $aggregate="true" $optional="true" $specification="fr.liglab.adele
+ .icasa.device.gasSensor.CarbonDioxydeSensor" $field="carbonDioxydeSen
+ sors" callback { $method="bindCarbonDioxydeSensor" $type="bind" }call
+ back { $method="unbindCarbonDioxydeSensor" $type="unbind" }}requires 
+ { $specification="alarm.service.AlarmService" $field="alarmService" }
+ requires { $specification="mail.services.MailSender" $field="mailSend
+ er" }callback { $method="start" $transition="validate" }callback { $m
+ ethod="stop" $transition="invalidate" }manipulation { $classname="gas
+ .alarm.GasAlarmSystemApplication" interface { $name="fr.liglab.adele.
+ icasa.device.DeviceListener" }interface { $name="fr.liglab.adele.icas
+ a.service.scheduler.PeriodicRunnable" }interface { $name="gas.alarm.G
+ asAlarmService" }field { $name="_CO2Threshold" $type="double" }field 
+ { $name="alarmRunning" $type="boolean" }field { $name="alarmService" 
+ $type="alarm.service.AlarmService" }field { $name="binaryLights" $typ
+ e="fr.liglab.adele.icasa.device.light.BinaryLight[]" }field { $name="
+ carbonDioxydeSensors" $type="fr.liglab.adele.icasa.device.gasSensor.C
+ arbonDioxydeSensor[]" }field { $name="dimmerLights" $type="fr.liglab.
+ adele.icasa.device.light.DimmerLight[]" }field { $name="m_lock" $type
+ ="java.lang.Object" }field { $name="mailSender" $type="mail.services.
+ MailSender" }field { $name="mailSent" $type="boolean" }field { $name=
+ "setOfListener" $type="java.util.Set" }field { $name="state" $type="b
+ oolean" }method { $name="stop" }method { $name="start" }method { $nam
+ e="bindCarbonDioxydeSensor" $arguments="{fr.liglab.adele.icasa.device
+ .gasSensor.CarbonDioxydeSensor,java.util.Map}" $names="{carbonDioxyde
+ Sensor,properties}" }method { $name="unbindCarbonDioxydeSensor" $argu
+ ments="{fr.liglab.adele.icasa.device.gasSensor.CarbonDioxydeSensor,ja
+ va.util.Map}" $names="{carbonDioxydeSensor,properties}" }method { $na
+ me="deviceAdded" $arguments="{fr.liglab.adele.icasa.device.GenericDev
+ ice}" $names="{arg0}" }method { $name="devicePropertyAdded" $argument
+ s="{fr.liglab.adele.icasa.device.GenericDevice,java.lang.String}" $na
+ mes="{arg0,arg1}" }method { $name="devicePropertyModified" $arguments
+ ="{fr.liglab.adele.icasa.device.GenericDevice,java.lang.String,java.l
+ ang.Object,java.lang.Object}" $names="{device,propertyName,oldValue,n
+ ewValue}" }method { $name="checkCo2" $return="boolean" }method { $nam
+ e="devicePropertyRemoved" $arguments="{fr.liglab.adele.icasa.device.G
+ enericDevice,java.lang.String}" $names="{arg0,arg1}" }method { $name=
+ "deviceEvent" $arguments="{fr.liglab.adele.icasa.device.GenericDevice
+ ,java.lang.Object}" $names="{device,data}" }method { $name="deviceRem
+ oved" $arguments="{fr.liglab.adele.icasa.device.GenericDevice}" $name
+ s="{arg0}" }method { $name="getPeriod" $return="long" }method { $name
+ ="getUnit" $return="java.util.concurrent.TimeUnit" }method { $name="r
+ un" }method { $name="addListener" $arguments="{gas.alarm.GasAlarmList
+ ener}" $names="{listener}" }method { $name="removeListener" $argument
  s="{gas.alarm.GasAlarmListener}" $names="{listener}" }method { $name=
- "removeListener" $arguments="{gas.alarm.GasAlarmListener}" $names="{l
- istener}" }method { $name="bindDimmerLight" $arguments="{fr.liglab.ad
- ele.icasa.device.light.DimmerLight,java.util.Map}" $names="{dimmerLig
- ht,properties}" }method { $name="unbindDimmerLight" $arguments="{fr.l
- iglab.adele.icasa.device.light.DimmerLight,java.util.Map}" $names="{d
- immerLight,properties}" }method { $name="bindBinaryLight" $arguments=
- "{fr.liglab.adele.icasa.device.light.BinaryLight,java.util.Map}" $nam
- es="{binaryLight,properties}" }method { $name="unbindBinaryLight" $ar
- guments="{fr.liglab.adele.icasa.device.light.BinaryLight,java.util.Ma
- p}" $names="{binaryLight,properties}" }}}
+ "bindDimmerLight" $arguments="{fr.liglab.adele.icasa.device.light.Dim
+ merLight,java.util.Map}" $names="{dimmerLight,properties}" }method { 
+ $name="unbindDimmerLight" $arguments="{fr.liglab.adele.icasa.device.l
+ ight.DimmerLight,java.util.Map}" $names="{dimmerLight,properties}" }m
+ ethod { $name="bindBinaryLight" $arguments="{fr.liglab.adele.icasa.de
+ vice.light.BinaryLight,java.util.Map}" $names="{binaryLight,propertie
+ s}" }method { $name="unbindBinaryLight" $arguments="{fr.liglab.adele.
+ icasa.device.light.BinaryLight,java.util.Map}" $names="{binaryLight,p
+ roperties}" }}}component { $name="gas.alarm.GasAlarmSystemApplication
+ " $classname="gas.alarm.GasAlarmSystemApplication" callback { $transi
+ tion="invalidate" $method="stop" }callback { $transition="validate" $
+ method="start" }manipulation { $classname="gas.alarm.GasAlarmSystemAp
+ plication" interface { $name="fr.liglab.adele.icasa.device.DeviceList
+ ener" }interface { $name="fr.liglab.adele.icasa.service.scheduler.Per
+ iodicRunnable" }interface { $name="gas.alarm.GasAlarmService" }field 
+ { $name="_CO2Threshold" $type="double" }field { $name="alarmRunning" 
+ $type="boolean" }field { $name="alarmService" $type="alarm.service.Al
+ armService" }field { $name="binaryLights" $type="fr.liglab.adele.icas
+ a.device.light.BinaryLight[]" }field { $name="carbonDioxydeSensors" $
+ type="fr.liglab.adele.icasa.device.gasSensor.CarbonDioxydeSensor[]" }
+ field { $name="dimmerLights" $type="fr.liglab.adele.icasa.device.ligh
+ t.DimmerLight[]" }field { $name="m_lock" $type="java.lang.Object" }fi
+ eld { $name="mailSender" $type="mail.services.MailSender" }field { $n
+ ame="mailSent" $type="boolean" }field { $name="setOfListener" $type="
+ java.util.Set" }field { $name="state" $type="boolean" }method { $name
+ ="stop" }method { $name="start" }method { $name="bindCarbonDioxydeSen
+ sor" $arguments="{fr.liglab.adele.icasa.device.gasSensor.CarbonDioxyd
+ eSensor,java.util.Map}" $names="{carbonDioxydeSensor,properties}" }me
+ thod { $name="unbindCarbonDioxydeSensor" $arguments="{fr.liglab.adele
+ .icasa.device.gasSensor.CarbonDioxydeSensor,java.util.Map}" $names="{
+ carbonDioxydeSensor,properties}" }method { $name="deviceAdded" $argum
+ ents="{fr.liglab.adele.icasa.device.GenericDevice}" $names="{arg0}" }
+ method { $name="devicePropertyAdded" $arguments="{fr.liglab.adele.ica
+ sa.device.GenericDevice,java.lang.String}" $names="{arg0,arg1}" }meth
+ od { $name="devicePropertyModified" $arguments="{fr.liglab.adele.icas
+ a.device.GenericDevice,java.lang.String,java.lang.Object,java.lang.Ob
+ ject}" $names="{device,propertyName,oldValue,newValue}" }method { $na
+ me="checkCo2" $return="boolean" }method { $name="devicePropertyRemove
+ d" $arguments="{fr.liglab.adele.icasa.device.GenericDevice,java.lang.
+ String}" $names="{arg0,arg1}" }method { $name="deviceEvent" $argument
+ s="{fr.liglab.adele.icasa.device.GenericDevice,java.lang.Object}" $na
+ mes="{device,data}" }method { $name="deviceRemoved" $arguments="{fr.l
+ iglab.adele.icasa.device.GenericDevice}" $names="{arg0}" }method { $n
+ ame="getPeriod" $return="long" }method { $name="getUnit" $return="jav
+ a.util.concurrent.TimeUnit" }method { $name="run" }method { $name="ad
+ dListener" $arguments="{gas.alarm.GasAlarmListener}" $names="{listene
+ r}" }method { $name="removeListener" $arguments="{gas.alarm.GasAlarmL
+ istener}" $names="{listener}" }method { $name="bindDimmerLight" $argu
+ ments="{fr.liglab.adele.icasa.device.light.DimmerLight,java.util.Map}
+ " $names="{dimmerLight,properties}" }method { $name="unbindDimmerLigh
+ t" $arguments="{fr.liglab.adele.icasa.device.light.DimmerLight,java.u
+ til.Map}" $names="{dimmerLight,properties}" }method { $name="bindBina
+ ryLight" $arguments="{fr.liglab.adele.icasa.device.light.BinaryLight,
+ java.util.Map}" $names="{binaryLight,properties}" }method { $name="un
+ bindBinaryLight" $arguments="{fr.liglab.adele.icasa.device.light.Bina
+ ryLight,java.util.Map}" $names="{binaryLight,properties}" }}}
 
